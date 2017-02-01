@@ -1,0 +1,838 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>School</title>
+    <style>
+     body {
+        background-color:whitesmoke;
+        }
+    </style>
+    <style>
+    .content2 {
+            min-width: 1000px;
+            margin-left: 10px;
+            overflow: hidden;
+         
+        }
+    </style>
+    <style>
+     .content1 {
+            min-width: 1000px;
+            margin-left: 10px;
+            overflow: hidden;
+            height: 130px;
+        }
+     .SchoolNameDiv {
+            min-width: 1600px;
+            margin-left: 10px;
+            overflow: hidden;
+            
+            height: 100px;
+        }
+     .card {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 40%;
+            border-radius: 5px;
+            background-color: white;
+            overflow: hidden;
+            min-width: 700px;
+        }
+     .card:hover {
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            }
+     img {
+            border-radius: 5px 5px 0 0;
+        }
+     .container {
+            padding: 2px 16px;
+        }
+     .Buscontainer {
+            padding: 15px 0px;
+            background-color:#689c68;
+        }
+    </style>
+    <style>
+     .divcard19 {
+        display:inline-block;
+        width:12.5%;
+        margin-top:15px;
+        }
+     .card19 {
+            transition: 0.3s;
+            width: 10%;
+            height: 50px;
+            border-radius: 1px;
+          
+          
+        }
+     .card20 {
+            box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 10%;
+            height: 50px;
+            border-radius: 1px;
+            color: burlywood;
+        
+        }
+     .card21 {
+            box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 10%;
+             height: 80px;
+            border-radius: 1px;
+           
+        }
+     .card20:hover {
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            }
+     img {
+            border-radius: 5px 5px 0 0;
+        }  
+     .container {
+            padding: 0px 8px;
+            text-align:center;
+        }
+     .textheader {
+            
+            font-size:12px;
+        }
+     .textheader21 {
+            font-size: 15px;
+
+        }
+     .cardvalue {
+        font-size:18px;
+        }
+    </style>
+    <style>
+     .div21header {
+            text-align: center;
+        }
+     .div21header span {
+                color: orange;
+                font-size: 10px;
+                margin-left: 6px;
+            }
+     .div21footer {
+            text-align: center;
+            margin-top: 10px;
+        }
+     .div21footer span {
+                margin-left: 20px;
+                font-size: 30px;
+                color: orange;
+                margin-top: 10px;
+            }  
+     .div20header {
+            margin-left: 20px;
+            margin-top:10px;
+        }
+     .div20header span {
+            margin-left:10px;
+            font-size:12px;
+            }    
+     .div20footer {
+           
+            font-size:13px;
+            margin-top:10px;
+        }
+    </style>
+    <script>
+        function BindData(data)
+        {
+
+        }
+    </script>
+    <style>
+      .cardtable {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 40%;
+            border-radius: 5px;
+            background-color: white;
+            overflow: hidden;
+            min-width: 300px;
+        }
+      .cardheader {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 40%;
+            border-radius: 5px;
+            background-color: white;
+            overflow: hidden;
+            min-width: 700px;
+           
+        }
+      .SchoolNameContent {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 40%;
+            border-radius: 5px;
+            min-width: 700px;
+            overflow: hidden;
+            text-align: center;
+            top: 2px;
+            height: 60px;
+
+            color: black;
+            position: inherit;
+            text-align: center;
+            background-color: rgba(0,0,0,0.2);
+        }
+      .card500 {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 40%;
+            border-radius: 5px;
+            background-color: white;
+            overflow: hidden;
+            min-width: 500px;
+        }
+      .card300 {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 40%;
+            border-radius: 5px;
+            background-color: white;
+            overflow: hidden;
+            min-width: 300px;
+        }
+      .card400 {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 40%;
+            border-radius: 5px;
+            background-color: white;
+            overflow: hidden;
+            min-width: 400px;
+        }
+      .card400height150 {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 40%;
+            border-radius: 5px;
+            background-color: white;
+            overflow: hidden;
+            min-width: 400px;
+            max-height:150px;
+        }
+      div.SchoolNameContent h4 {
+            text-align: center;
+            margin: auto;
+            line-height: 51px;
+            vertical-align: middle;
+        }
+    </style>
+    <style>
+        .iconwithspanimg {
+      float:left;
+      height:32px;
+      width:32px;
+        }
+        .iconwithspanlabel{
+            color:cadetblue;
+      float:right;
+      padding-top:6px;
+      padding-left:8px;
+      padding-right:8px;
+      font-family:Arial, Helvetica, sans-serif;
+
+        }
+        .iconwithspan
+        {
+            border-radius: 25px;
+            border:1px solid rgba(0,0,0,0.2);
+            
+        }
+    </style>
+    <style>
+     #sportslisttable {
+    width:600px;
+}
+    .tablecontainer div {
+    display:inline-block;
+}
+    </style>
+    <style>
+           .card {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 30%;
+            display: -webkit-inline-box;
+            margin: 0 2px;
+        }
+
+            .card:hover {
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            }
+
+        .container {
+            padding: 2px 16px;
+        }
+        .ListOfData {
+        text-align:center;
+        margin-top:50px;
+        display:inline-flex;
+        }
+    </style>
+    <style>
+    .card250 {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 20%;
+            border-radius: 5px;
+            background-color: white;
+            overflow: hidden;
+            min-width: 250px;
+        }
+    .card250height150 {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 20%;
+            border-radius: 5px;
+            background-color: white;
+            overflow: hidden;
+            min-width: 250px;
+            max-height:150px;
+        }
+    .card250height300 {
+            transition: 0.3s;
+            width: 30%;
+            border-radius: 5px;
+           
+            overflow: hidden;
+            min-width: 250px;
+            max-height:300px;
+        }
+        .card400 {
+            transition: 0.3s;
+            width: 30%;
+            border-radius: 5px;
+            overflow: hidden;
+            min-width: 400px;
+        }  
+        
+    .card:hover {
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            }
+    </style>
+    <style>
+        .containerdetails {
+            font-size: 10px;
+            margin-bottom: 4px;
+        }
+        ul#menu li {
+            border-radius: 2px;
+            border: 1px solid cadetblue;
+            display: inline;
+            color:cadetblue;
+            font-size: 14px;
+            float: left;
+            padding: 4px 4px 4px 4px;
+            margin-left: 2px;
+            margin-top: 2px;
+            margin-bottom: 4px;
+        }
+        ul menu {
+        }
+   </style>
+    <style>
+        .panelgreen {
+            padding: 15px 0px;
+            background-color: #689c68;
+        }
+        .panelcadetblue {
+            padding: 15px 0px;
+            background-color: cadetblue;
+        }
+        .panelcadetgrey {
+            padding: 15px 0px;
+            background-color: #808080;
+        }
+        .panelcadetgrey span {
+            color:white;
+            }
+            .panelcadetblue span {
+            color:white;
+            }
+    </style>
+    <style>
+        .card600 {
+            transition: 0.3s;
+            width: 20%;
+            border-radius: 5px;
+            background-color: white;
+            overflow: hidden;
+            min-width: 600px;
+            display:inline-flex;
+        }
+        .height350 {
+            transition: 0.3s;
+            width: 20%;
+            border-radius: 5px;
+            background-color: white;
+            overflow: hidden;
+            min-height: 350px;
+        }
+        .photocard190 {
+            transition: 0.3s;
+            width: 20%;
+            overflow: hidden;
+            min-width:185px;
+            max-width:190px;
+        }
+        .card350 {
+            transition: 0.3s;
+            width: 20%;
+            overflow: hidden;
+            min-width:340px;
+            max-width:345px;
+        }
+        .photocard180 {
+            transition: 0.3s;
+            width: 20%;
+            overflow: hidden;
+            min-width:175px;
+            max-width:180px;
+        }
+        .RoundedImage {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+        }
+        .NearestHospital tr, td {
+            padding: 15px;
+            text-align: left;
+        }
+        .NearestHospital td {
+        border-bottom:1px solid rgba(0,0,0,0.2);
+
+        }
+    </style>
+    <style>
+        .fadein {
+            position: absolute;
+            top: 0px;
+        }
+
+            .fadein img {
+                position: absolute;
+                left: -30px;
+                top: 0;
+                -webkit-animation-name: fade;
+                -webkit-animation-iteration-count: infinite;
+                -webkit-animation-duration: 6s;
+                animation-name: fade;
+                animation-iteration-count: infinite;
+                animation-duration: 6s;
+            }
+
+        @@-webkit-keyframes fade {
+            0% {
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            33% {
+                opacity: 1;
+            }
+
+            53% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @@keyframes fade {
+            0% {
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            33% {
+                opacity: 1;
+            }
+
+            53% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        #f1 {
+            background-color: lightblue;
+        }
+
+        #f2 {
+            -webkit-animation-delay: -4s;
+            background-color: yellow;
+        }
+
+        #f3 {
+            -webkit-animation-delay: -2s;
+            background-color: lightgreen;
+        }
+    </style>
+    <style>
+        .SchoolBanner {
+          width:1600px;
+            min-height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div ng-app="School">
+        <div class="SchoolBanner">
+            <div class="ImagesBanner" style="display:inline-flex;width:1600px;">
+                <div class="fadein">
+                    <img id="f3" src="~/Images/School/Banner/1.jpg" style="height:250px;width:1600px;">
+                    <img id="f2" src="~/Images/School/Banner/2.jpg" style="height:250px;width:1600px;">
+                    <img id="f1" src="~/Images/School/Banner/3.jpg" style="height:250px;width:1600px;">
+                </div>
+                @*<img src="img_avatar2.png" alt="Avatar" style="width:100%">*@
+
+            </div>
+        </div>
+                    <div class="SchoolNameDiv">
+                        <div class="SchoolNameContent" style="display:inline-flex;width:1600px;">
+
+                            <h4 >SRI KRISHNA MATRICULATION HIGHER SECINDARY SCHOOL</h4>
+                            @*<img src="img_avatar2.png" alt="Avatar" style="width:100%">*@
+
+            </div>
+        </div>
+        @*School basic Details*@
+        <div style="display:inline-flex;width:1600px; ">
+            <div style="display:inline-block;width:20%;">
+                <div class="card20" style="display:inline-block;width:90%;">
+                    <div class="div20header"><img src="~/Images/School/Main/Board.png" style="vertical-align: middle"><span>Samacheer</span></div>
+                    @*<div  class="div20footer"><span>Samacheer</span></div>*@
+                    @*<div class="container">
+                            <span style="color:#044f00" class="cardvalue"><b>86%</b></span>
+                            <p>Interior Designer</p>
+                        </div>*@
+                </div>
+            </div>
+            <div style="display:inline-block;width:20%;">
+                <div class="card20" style="display:inline-block;width:90%;" ng-click="BindData(Transportation);">
+                    <div class="div20header"><img src="~/Images/School/Main/Class.png" style="vertical-align: middle"><span>Grade 1 to Grade 10</span></div>
+                    @*<div class="div20footer"><span>Grade 1 to Grade 10</span></div>*@
+                    @*<div class="container">
+                            <span style="color:#044f00" class="cardvalue"><b>86%</b></span>
+                            <p>Interior Designer</p>
+                        </div>*@
+                </div>
+            </div>
+            <div style="display:inline-block;width:20%;">
+                <div class="card20" style="display:inline-block;width:90%;">
+                    <div class="div20header"><img src="~/Images/School/Main/Phone.png" style="vertical-align: middle"><span>0422-2345697,0422-2345697</span></div>
+                    @*<div  class="div20footer"><span>0422-2345697,0422-2345697</span></div>*@
+                    @*<div class="container">
+                            <span style="color:#044f00" class="cardvalue"><b>86%</b></span>
+                            <p>Interior Designer</p>
+                        </div>*@
+                </div>
+            </div>
+            <div style="display:inline-block;width:20%;">
+                <div class="card20" style="display:inline-block;width:90%;">
+                    <div class="div20header"><img src="~/Images/School/Main/Mail.png" style="vertical-align: middle"><span>principal@sskit.com</span></div>
+                    @*<div  class="div20footer"><span>principal@sskit.com</span></div>*@
+                    @*<div class="container">
+                            <span style="color:#044f00" class="cardvalue"><b>86%</b></span>
+                            <p>Interior Designer</p>
+                        </div>*@
+                </div>
+            </div>
+            <div style="display:inline-block;width:20%;">
+                <div class="card20" style="display:inline-block;width:90%;">
+                    <div class="div20header"><img src="~/Images/School/Main/Mail.png" style="vertical-align: middle"><span>principal@sskit.com</span></div>
+                    @*<div  class="div20footer"><span>principal@sskit.com</span></div>*@
+                    @*<div class="container">
+                            <span style="color:#044f00" class="cardvalue"><b>86%</b></span>
+                            <p>Interior Designer</p>
+                        </div>*@
+                </div>
+            </div>
+        </div>
+        @*School Ratio Details*@
+        <div style="display:inline-flex;width:1600px;margin-top:20px;">
+            <div style="display:inline-block;width:25%;">
+                <div class="card21" style="display:inline-block;width:90%;">
+                    <div class="div21header"><span>Total Students</span></div>
+                    <div class="div21footer"><img src="~/Images/School/Main/NumberofStudent.png" style="vertical-align: top"><span>3,262</span></div>
+                    @*<div class="container">
+                            <span style="color:#044f00" class="cardvalue"><b>86%</b></span>
+                            <p>Interior Designer</p>
+                        </div>*@
+                </div>
+            </div>
+            <div style="display:inline-block;width:25%;">
+                <div class="card21" style="display:inline-block;width:95%;" ng-click="BindData(Transportation);">
+                    <div class="div21header"><span>Student:Staff Ration</span></div>
+                    <div class="div21footer"><img src="~/Images/School/Main/StaffStudentRatio.png" style="vertical-align: top"><span>30:1</span></div>
+                    @*<div class="container">
+                            <span style="color:#044f00" class="cardvalue"><b>86%</b></span>
+                            <p>Interior Designer</p>
+                        </div>*@
+                </div>
+            </div>
+            <div style="display:inline-block;width:25%;">
+                <div class="card21" style="display:inline-block;width:95%;">
+                    <div class="div21header"><span>School Respond Time</span></div>
+                    <div class="div21footer"><img src="~/Images/School/Main/Response.png" style="vertical-align: top"><span>7 Days</span></div>
+                    @*<div class="container">
+                            <span style="color:#044f00" class="cardvalue"><b>86%</b></span>
+                            <p>Interior Designer</p>
+                        </div>*@
+                </div>
+            </div>
+            <div style="display:inline-block;width:25%;">
+                <div class="card21" style="display:inline-block;width:95%;">
+                    <div class="div21header"><span>Fees</span></div>
+                    <div class="div21footer"><img src="~/Images/School/Main/Fees.png" style="vertical-align: top"><span>12k-27k</span></div>
+                    @*<div class="container">
+                            <span style="color:#044f00" class="cardvalue"><b>86%</b></span>
+                            <p>Interior Designer</p>
+                        </div>*@
+                </div>
+            </div>
+        </div>
+        <div ng-controller="databingschool">
+            <div style="display:inline-flex;width:1600px;height:80px;margin-top:10px;background-color:rgba(0,0,0,0.2);">
+                <div class="divcard19">
+                    <div class="card19" style="display:inline-block;width:95%;">
+                        <div style="text-align:center"><b><span class="textheader" style="color:black;font-size:10px;">Hostel</span></b></div>
+                        <div style="text-align:center"><img src="~/Images/School/Hostel.png" alt="Avatar" style="width:20%"></div>
+                        @*<div class="container">
+                                <span style="color:#044f00" class="cardvalue"><b>86%</b></span>
+                                <p>Interior Designer</p>
+                            </div>*@
+                    </div>
+                </div>
+                <div class="divcard19">
+                    <div class="card19" style="display:inline-block;width:95%;" ng-click="BindData(Transportation);">
+                        <div style="text-align:center"><b><span class="textheader" style="color:black;font-size:10px;">Transportation</span></b></div>
+                        <div style="text-align:center"><img src="~/Images/School/Transportation.png" alt="Avatar" style="width:20%"></div>
+                        @*<div class="container">
+                                <span style="color:#044f00" class="cardvalue"><b>86%</b></span>
+                                <p>Interior Designer</p>
+                            </div>*@
+                    </div>
+                </div>
+                <div class="divcard19">
+                    <div class="card19" style="display:inline-block;width:95%;">
+                        <div style="text-align:center"><b><span class="textheader" style="color:black;font-size:10px;">Canteen</span></b></div>
+                        <div style="text-align:center"><img src="~/Images/School/Canteen.png" alt="Avatar" style="width:20%"></div>
+                        @*<div class="container">
+                                <span style="color:#044f00" class="cardvalue"><b>86%</b></span>
+                                <p>Interior Designer</p>
+                            </div>*@
+                    </div>
+                </div>
+                <div class="divcard19">
+                    <div class="card19" style="display:inline-block;width:95%;">
+                        <div style="text-align:center"><b><span class="textheader" style="color:black;font-size:10px;">Medical Assistance</span></b></div>
+                        <div style="text-align:center"><img src="~/Images/School/HealthCare.png" alt="Avatar" style="width:20%"></div>
+                        @*<div class="container">
+                                <span style="color:#044f00" class="cardvalue"><b>86%</b></span>
+                                <p>Interior Designer</p>
+                            </div>*@
+                    </div>
+                </div>
+                <div class="divcard19">
+                    <div class="card19" style="display:inline-block;width:95%;">
+                        <div style="text-align:center"><b><span class="textheader" style="color:black;font-size:10px;">Sports</span></b></div>
+                        <div style="text-align:center"><img src="~/Images/School/Sports.png" alt="Avatar" style="width:20%"></div>
+                        @*<div class="container">
+                                <span style="color:#044f00" class="cardvalue"><b>86%</b></span>
+                                <p>Interior Designer</p>
+                            </div>*@
+                    </div>
+                </div>
+                <div class="divcard19">
+                    <div class="card19" style="display:inline-block;width:95%;">
+                        <div style="text-align:center"><b><span class="textheader" style="color:black;font-size:10px;">Academics</span></b></div>
+                        <div style="text-align:center"><img src="~/Images/School/Academics.png" alt="Avatar" style="width:20%"></div>
+                        @*<div class="container">
+                                <span style="color:#044f00" class="cardvalue"><b>86%</b></span>
+                                <p>Interior Designer</p>
+                            </div>*@
+                    </div>
+                </div>
+                <div class="divcard19">
+                    <div class="card19" style="display:inline-block;width:95%;">
+                        <div style="text-align:center"><b><span class="textheader" style="color:black;font-size:10px;;font-size:10px;">Achievement</span></b></div>
+                        <div style="text-align:center"><img src="~/Images/School/Achievement.png" alt="Avatar" style="width:20%"></div>
+                        @*<div class="container">
+                                <span style="color:#044f00" class="cardvalue"><b>86%</b></span>
+                                <p>Interior Designer</p>
+                            </div>*@
+                    </div>
+                </div>
+                <div class="divcard19">
+                    <div class="card19" style="display:inline-block;width:95%;">
+                        <div style="text-align:center"><b><span class="textheader" style="color:black;font-size:10px;">Extra Curricular</span></b></div>
+                        <div style="text-align:center"><img src="~/Images/School/Extra Curricular.png" alt="Avatar" style="width:20%"></div>
+                        @*<div class="container">
+                                <span style="color:#044f00" class="cardvalue"><b>86%</b></span>
+                                <p>Interior Designer</p>
+                            </div>*@
+                    </div>
+                </div>
+            </div>
+            <div ng-bind-html="DataBindRelatedData" style="display:inline;width:1200px;">
+                @*Sports*@
+                <div class="ListOfData">
+                    <div class="card200" style="border:1px solid rgba(0,0,0,0.2);margin-right:20px;margin-left:10px;">
+
+                        <table>
+                            <tr>
+                                <td style="text-align:center;">
+                                    <img src="~/Images/School/Sports/cricket.png" />
+
+                                </td>
+
+                            </tr>
+                            <tr style="background-color:green;color:white;">
+                                <td style="text-align:center;"><span>Cricket</span></td>
+                            </tr>
+                            <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                <td><span>Trainer</span><span style="background-color:green;color:whitesmoke;float:right;padding:2px 12px 2px 12px;">Yes</span></td>
+                            </tr>
+                            <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                <td><span>Ground</span><span style="background-color:green;color:whitesmoke;float:right;padding:2px 12px 2px 12px;">Yes</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Achievements</br>
+                                    <ul>
+                                        <li>District match winner 2008</li>
+                                        <li>State match winner 2007</li>
+                                        <li>Zonal match winner 20011</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <div class="card200" style="border:1px solid rgba(0,0,0,0.2);margin-right:20px;margin-left:10px;">
+
+                        <table>
+                            <tr>
+                                <td style="text-align:center;">
+                                    <img src="~/Images/School/Sports/cricket.png" />
+
+                                </td>
+
+                            </tr>
+                            <tr style="background-color:green;color:white;">
+                                <td style="text-align:center;"><span>Cricket</span></td>
+                            </tr>
+                            <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                <td><span>Trainer</span><span style="background-color:green;color:whitesmoke;float:right;padding:2px 12px 2px 12px;">Yes</span></td>
+                            </tr>
+                            <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                <td><span>Ground</span><span style="background-color:green;color:whitesmoke;float:right;padding:2px 12px 2px 12px;">Yes</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Achievements</br>
+                                    <ul>
+                                        <li>District match winner 2008</li>
+                                        <li>State match winner 2007</li>
+                                        <li>Zonal match winner 20011</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <div class="card200" style="border:1px solid rgba(0,0,0,0.2);margin-right:20px;margin-left:10px;">
+                        <table>
+                            <tr>
+                                <td style="text-align:center;">
+                                    <img src="~/Images/School/Sports/cricket.png" />
+
+                                </td>
+
+                            </tr>
+                            <tr style="background-color:green;color:white;">
+                                <td style="text-align:center;"><span>Football</span></td>
+                            </tr>
+                            <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                <td><span>Trainer</span><span style="background-color:green;color:whitesmoke;float:right;padding:2px 12px 2px 12px;">Yes</span></td>
+                            </tr>
+                            <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                <td><span>Ground</span><span style="background-color:green;color:whitesmoke;float:right;padding:2px 12px 2px 12px;">Yes</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Achievements</br>
+                                    <ul>
+                                        <li>District match winner 2008</li>
+                                        <li>State match winner 2007</li>
+                                        <li>Zonal match winner 20011</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <div class="card200" style="border:1px solid rgba(0,0,0,0.2);margin-right:20px;margin-left:10px;">
+                        <table>
+                            <tr>
+                                <td style="text-align:center;">
+                                    <img src="~/Images/School/Sports/cricket.png" />
+
+                                </td>
+
+                            </tr>
+                            <tr style="background-color:green;color:white;">
+                                <td style="text-align:center;"><span>Basket Ball</span></td>
+                            </tr>
+                            <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                <td><span>Trainer</span><span style="background-color:red;color:whitesmoke;float:right;padding:2px 12px 2px 12px;">No</span></td>
+                            </tr>
+                            <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                <td><span>Ground</span><span style="background-color:green;color:whitesmoke;float:right;padding:2px 12px 2px 12px;">Yes</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Achievements</br>
+                                    <ul>
+                                        <li>District match winner 2008</li>
+                                        <li>State match winner 2007</li>
+                                        <li>Zonal match winner 20011</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

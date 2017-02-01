@@ -1,0 +1,121 @@
+@*Hostel*@
+            
+                <div ng-bind-html="DataBindRelatedData" style="display:inline-flex;width:1200px;">
+                    <div class="cardtable" style="display:inline-block;width:50%;">
+                        <table>
+                            <tr>
+                                <td>Number of Rooms</td>
+                                <td>90</td>
+                            </tr>
+                            <tr>
+                                <td>Students per Room</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>Foods Provided</td>
+                                <td>Vega and Non Veg</td>
+                            </tr>
+                            <tr>
+                                <td>Food Cost</td>
+                                <td>3500/Monthly</td>
+                            </tr>
+                            <tr>
+                                <td>Room Cost</td>
+                                <td>16000/monthly</td>
+                            </tr>
+                            <tr>
+                                <td>Outing Time</td>
+                                <td>06:00 every Sunday</td>
+                            </tr>
+                            <tr>
+                                <td>Phone Center</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Parents Visiting time</td>
+                                <td>Every second week of the month</td>
+                            </tr>
+                            <tr>
+                                <td>Canteen Facility</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Entertainment Facility</td>
+                                <td>Movies on every saturday night</td>
+                            </tr>
+                            <tr>
+                                <td>Hostel Location</td>
+                                <td>Inside Campus</td>
+                            </tr>
+                            <tr>
+                                <td>AC/Non AC</td>
+                                <td>Only NON-AC</td>
+                            </tr>
+                            <tr>
+                                <td>Laundry Services</td>
+                                <td>Available</td>
+                            </tr>
+                            <tr>
+                                <td>Sports Activity</td>
+                                <td>Gym,Shuttle Court</td>
+                            </tr>
+                            <tr>
+                                <td>Health Cares</td>
+                                <td>Doctors inside campus</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="cardtable" style="display:inline-block;width:50%;" >
+                        <table>
+                            <tr>
+                                <td>Doctors Details</td>
+                                <td>Santhanam Krishnana M.B.B.S</br>Venakatesh M.B.B.S</td>
+                            </tr>
+                            <tr>
+                                <td>Beds Used</td>
+                                <td>Koiron</td>
+                            </tr>
+                            <tr>
+                                <td>Hostel Room Cleaning Periodical</td>
+                                <td>Every day evening sweeping,Weekly twice watesh cleaning</td>
+                            </tr>
+                            <tr>
+                                <td>Warden pre student</td>
+                                <td>82 Students/Warden</td>
+                            </tr>
+                            <tr>
+                                <td>Safety and Security</td>
+                                <td>Day and Night watchman</td>
+                            </tr>
+                            <tr>
+                                <td>Number of Watchman</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>Security Cameras</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Fire Extinguisher</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Emergency Number</td>
+                                <td>0422-4236578</td>
+                            </tr>
+                            <tr>
+                                <td>Health Inspections Periodical</td>
+                                <td>Every Month</td>
+                            </tr>
+                            <tr>
+                                <td>Psychologists periodical</td>
+                                <td>Every Month</td>
+                            </tr>
+                            <tr>
+                                <td>Warden Psychologistic training</td>
+                                <td>Every Month</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            

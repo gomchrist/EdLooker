@@ -1,0 +1,743 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <title>EDLooker</title>
+    <style>
+        #bannerimg {
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            opacity: 0.60;
+            filter: alpha(opacity=90); /* For IE8 and earlier */
+        }
+        #LocationSearch {
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            font-size: 16px;
+            background-color: white;
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            padding: 10px 18px 12px 35px;
+            opacity: 0.50;
+            filter: alpha(opacity=90);
+        }
+        #Search {
+            width: 50%;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            font-size: 16px;
+            background-color: white;
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            padding: 10px 18px 12px 35px;
+            opacity: 0.50;
+            filter: alpha(opacity=90);
+            /*box-shadow: 2px 2px 2px #888888;*/
+        }
+        #Searchdiv {
+        margin-top:-280px;
+        text-align:center;
+        }
+        
+    </style>
+    <style>
+        .button1 {
+            background-color: #ffd800; /* Green */
+            border: none;
+            color: black;
+            margin-left:-20px;
+            margin-top:20px;
+            padding: 15px 32px;
+            text-align: center;
+             border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .button1 {font-size: 10px;}
+    </style>
+    <style>
+        
+
+        #searchbutton {
+            position: relative;
+            top: 70%;
+        }
+        #Searchdiv input[type=text] {
+            margin-top: 30px;
+        }
+        
+        #Searchdiv #bannertext {
+            color: black;
+            text-align: center;
+        }
+        
+    </style>
+    <style>
+        body {
+	font-family: sans-serif;
+	font-weight: normal;
+	margin: 10px;
+	color: #999;
+	background-color: white;
+}
+
+div .inline {
+	clear: both;
+	margin: 0 20px;
+}
+
+label {
+  width: 200px;
+  border-radius: 3px;
+  border: 1px solid #D1D3D4
+}
+
+/* hide input */
+input.radio:empty {
+	margin-left: -999px;
+}
+
+/* style label */
+input.radio:empty ~ label {
+	position: relative;
+	float: left;
+	line-height: 2.8em;
+	text-indent: 3.25em;
+	margin-top: 2em;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+input.radio:empty ~ label:before {
+	position: absolute;
+	display: block;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	content: '';
+	width: 2.8em;
+	background: #D1D3D4;
+	border-radius: 3px 0 0 3px;
+}
+
+/* toggle hover */
+input.radio:hover:not(:checked) ~ label:before {
+	content:'\2714';
+	text-indent: .9em;
+	color: #C2C2C2;
+}
+
+input.radio:hover:not(:checked) ~ label {
+	color: #888;
+}
+
+/* toggle on */
+input.radio:checked ~ label:before {
+	content:'\2714';
+	text-indent: .9em;
+	color: #9CE2AE;
+	background-color: #4DCB6D;
+}
+
+input.radio:checked ~ label {
+	color: #777;
+}
+
+/* radio focus */
+input.radio:focus ~ label:before {
+	box-shadow: 0 0 0 3px #999;
+}
+    </style>
+    <style>
+        div.wrapper {
+            width: 100%; /* or whatever */
+            overflow: hidden;
+            white-space: nowrap;
+            margin-top:100px;
+            margin-left:100px;
+        }
+
+        div.inline {
+            display: inline-block;
+        }
+    </style>
+    <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 30%;
+            display: -webkit-inline-box;
+            margin: 0 2px 4px 6px;
+        }
+
+            .card:hover {
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            }
+
+        .container {
+            padding: 2px 16px;
+        }
+        
+        .ListOfData {
+        text-align:center;
+        margin-top:50px;
+        }
+       
+    </style>
+    <style>
+         #logo {
+        margin-top:-700px;
+        width:20%;
+         opacity: 1.0;
+        }
+    </style>
+</head>
+<body>
+    <img id="bannerimg" src="~/Images/Homepage.jpg" />
+    <img src="~/Images/Logo.png" id="logo" />
+    <div id="Searchdiv">
+        <h1 id="bannertext">DISCOVER YOUR FUTURE HERE</h1>
+        <input type="text" id="LocationSearch" placeholder="Location">
+        <input type="text" id="Search" placeholder="Lookup">
+        <div class="alignbuttoncenter">
+            <button id="searchbutton" class="button1 button10">Search</button>
+        </div>
+    </div>
+    @*<div class="wrapper">
+        <div class="inline">
+            <input type="radio" name="radio" id="radio1" class="radio" checked />
+            <label for="radio1">KINDER GARDEN</label>
+        </div>
+
+        <div class="inline">
+            <input type="radio" name="radio" id="radio2" class="radio" />
+            <label for="radio2">SCHOOL</label>
+        </div>
+
+        <div class="inline">
+            <input type="radio" name="radio" id="radio3" class="radio" />
+            <label for="radio3">COLLEGE</label>
+        </div>
+
+        <div class="inline">
+            <input type="radio" name="radio" id="radio4" class="radio" />
+            <label for="radio4">SPECIAL CLASSES</label>
+        </div>
+       
+    </div>    
+    <div style="text-align:center;margin-top:10px;">
+        <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            More Filter
+        </button>
+        <div class="collapse" id="collapseExample">
+            <div class="card card-block">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+            </div>
+        </div>
+    </div>*@
+    <div class="ListOfData">
+        <div class="card">
+            <img src="~/Images/Homepage.jpg" alt="Avatar" style="width:100%">
+            <div class="container">
+                <h4><b>SKCET</b></h4>
+                <p>Engineering College</p>
+                <div class="containerdetails" style="display:flex">
+                    <div class="NumberofStudents" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">#Students</span>
+                        </div>
+                        <div>
+                            <span style="font-size:15px;">210</span>
+                        </div>
+                    </div>
+                    <div class="Timing" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Timing</span>
+                        </div>
+                        <div>
+                            <span style="font-size:15px;">7pm-8pm</span>
+                        </div>
+                    </div>
+                    <div class="Pricing" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Pricing</span>
+                        </div>
+                        <div>
+                            <span style="font-size:15px;">8k-12k</span>
+                        </div>
+                    </div>
+                    <div class="Review" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Review</span>
+                        </div>
+                        <div>
+                            <span style="color:orangered;font-size:15px;">3.5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="~/Images/Homepage.jpg" alt="Avatar" style="width:100%">
+            <div class="container">
+                <h4><b>SKIT</b></h4>
+                <p>Engineering College</p>
+                <div class="containerdetails" style="display:flex">
+                    <div class="NumberofStudents" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">#Students</span>
+                        </div>
+                        <div>
+                            <span style="font-size:15px;">210</span>
+                        </div>
+                    </div>
+                    <div class="Timing" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Timing</span>
+                        </div>
+                        <div>
+                            <span style="font-size:15px;">7pm-8pm</span>
+                        </div>
+                    </div>
+                    <div class="Pricing" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Pricing</span>
+                        </div>
+                        <div>
+                            <span style="font-size:15px;">8k-12k</span>
+                        </div>
+                    </div>
+                    <div class="Review" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Review</span>
+                        </div>
+                        <div>
+                            <span style="color:orangered;font-size:15px;">3.5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="~/Images/Homepage.jpg" alt="Avatar" style="width:100%">
+            <div class="container">
+                <h4><b>Virtual Technolgies</b></h4>
+                <p>VLSI Design</p>
+                <div class="containerdetails" style="display:flex">
+                    <div class="NumberofStudents" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">#Students</span>
+                        </div>
+                        <div>
+                            <span style="font-size:15px;">210</span>
+                        </div>
+                    </div>
+                    <div class="Timing" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Timing</span>
+                        </div>
+                        <div>
+                            <span style="font-size:15px;">7pm-8pm</span>
+                        </div>
+                    </div>
+                    <div class="Pricing" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Pricing</span>
+                        </div>
+                        <div>
+                            <span style="font-size:15px;">8k-12k</span>
+                        </div>
+                    </div>
+                    <div class="Review" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Review</span>
+                        </div>
+                        <div>
+                            <span style="color:orangered;font-size:15px;">3.5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="~/Images/Homepage.jpg" alt="Avatar" style="width:100%">
+            <div class="container">
+                <h4><b>Sun Bright</b></h4>
+                <p>CAD Design</p>
+                <div class="containerdetails" style="display:flex">
+                    <div class="NumberofStudents" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">#Students</span>
+                        </div>
+                        <div>
+                            <span style="font-size:15px;">210</span>
+                        </div>
+                    </div>
+                    <div class="Timing" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Timing</span>
+                        </div>
+                        <div>
+                            <span style="font-size:15px;">7pm-8pm</span>
+                        </div>
+                    </div>
+                    <div class="Pricing" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Pricing</span>
+                        </div>
+                        <div>
+                            <span style="font-size:15px;">8k-12k</span>
+                        </div>
+                    </div>
+                    <div class="Review" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Review</span>
+                        </div>
+                        <div>
+                            <span style="color:orangered;font-size:15px;">3.5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="~/Images/Homepage.jpg" alt="Avatar" style="width:100%">
+            <div class="container">
+                <h4><b>NIIT</b></h4>
+                <p>C++,C#</p>
+                <div class="containerdetails" style="display:flex">
+                    <div class="NumberofStudents" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">#Students</span>
+                        </div>
+                        <div>
+                            <span style="font-size:15px;">210</span>
+                        </div>
+                    </div>
+                    <div class="Timing" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Timing</span>
+                        </div>
+                        <div>
+                            <span style="font-size:15px;">7pm-8pm</span>
+                        </div>
+                    </div>
+                    <div class="Pricing" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Pricing</span>
+                        </div>
+                        <div>
+                            <span style="font-size:15px;">8k-12k</span>
+                        </div>
+                    </div>
+                    <div class="Review" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Review</span>
+                        </div>
+                        <div>
+                            <span style="color:orangered;font-size:15px;">3.5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="~/Images/Homepage.jpg" alt="Avatar" style="width:100%">
+            <div class="container">
+                <h4><b>Teach Bright</b></h4>
+                <p>C#,Java</p>
+                <div class="containerdetails" style="display:flex">
+                    <div class="NumberofStudents" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">#Students</span>
+                        </div>
+                        <div>
+                            <span style="font-size:15px;">210</span>
+                        </div>
+                    </div>
+                    <div class="Timing" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Timing</span>
+                        </div>
+                        <div>
+                            <span style="font-size:15px;">7pm-8pm</span>
+                        </div>
+                    </div>
+                    <div class="Pricing" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Pricing</span>
+                        </div>
+                        <div>
+                            <span style="font-size:15px;">8k-12k</span>
+                        </div>
+                    </div>
+                    <div class="Review" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Review</span>
+                        </div>
+                        <div>
+                            <span style="color:orangered;font-size:15px;">3.5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="~/Images/Homepage.jpg" alt="Avatar" style="width:100%">
+            <div class="container">
+                <h4><b>Enlight Teaching</b></h4>
+                <p>CAD Modelling</p>
+                <div class="containerdetails" style="display:flex">
+                    <div class="NumberofStudents" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">#Students</span>
+                        </div>
+                        <div>
+                            <span style="font-size:15px;">210</span>
+                        </div>
+                    </div>
+                    <div class="Timing" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Timing</span>
+                        </div>
+                        <div>
+                            <span style="font-size:15px;">7pm-8pm</span>
+                        </div>
+                    </div>
+                    <div class="Pricing" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Pricing</span>
+                        </div>
+                        <div>
+                            <span style="font-size:15px;">8k-12k</span>
+                        </div>
+                    </div>
+                    <div class="Review" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Review</span>
+                        </div>
+                        <div>
+                            <span style="color:orangered;font-size:15px;">3.5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="~/Images/Homepage.jpg" alt="Avatar" style="width:100%">
+            <div class="container">
+                <h4><b>NIIT</b></h4>
+                <p>SQL</p>
+                <div class="containerdetails" style="display:flex">
+                    <div class="NumberofStudents" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">#Students</span>
+                        </div>
+                        <div>
+                            <span style="font-size:15px;">210</span>
+                        </div>
+                    </div>
+                    <div class="Timing" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Timing</span>
+                        </div>
+                        <div>
+                            <span style="font-size:15px;">7pm-8pm</span>
+                        </div>
+                    </div>
+                    <div class="Pricing" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Pricing</span>
+                        </div>
+                        <div>
+                            <span style="font-size:15px;">8k-12k</span>
+                        </div>
+                    </div>
+                    <div class="Review" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Review</span>
+                        </div>
+                        <div>
+                            <span style="color:orangered;font-size:15px;">3.5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="~/Images/Homepage.jpg" alt="Avatar" style="width:100%">
+            <div class="container">
+                <h4><b>Mahavandir</b></h4>
+                <p>Matriculation</p>
+                <div class="containerdetails" style="display:flex">
+                    <div class="NumberofStudents" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">#Students</span>
+                        </div>
+                        <div>
+                            <span style="font-size:15px;">210</span>
+                        </div>
+                    </div>
+                    <div class="Timing" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Timing</span>
+                        </div>
+                        <div>
+                            <span style="font-size:15px;">7pm-8pm</span>
+                        </div>
+                    </div>
+                    <div class="Pricing" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Pricing</span>
+                        </div>
+                        <div>
+                            <span style="font-size:15px;">8k-12k</span>
+                        </div>
+                    </div>
+                    <div class="Review" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Review</span>
+                        </div>
+                        <div>
+                            <span style="color:orangered;font-size:15px;">3.5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="~/Images/Homepage.jpg" alt="Avatar" style="width:100%">
+            <div class="container">
+                <h4><b>Tina School</b></h4>
+                <div >
+                    <span >MBA,MCSA</span>
+                    <span style="float:right;color:green;font-size:14px;float:right">Special Class</span>
+                </div>
+                <div class="containerdetails" style="display:flex">
+                    <div class="NumberofStudents" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">#Students</span>
+                        </div>
+                        <div>
+                            <span style="font-size:15px;">210</span>
+                        </div>
+                    </div>
+                    <div class="Timing" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Timing</span>
+                        </div>
+                        <div>
+                            <span style="font-size:15px;">7pm-8pm</span>
+                        </div>
+                    </div>
+                    <div class="Pricing" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Pricing</span>
+                        </div>
+                        <div>
+                            <span style="font-size:15px;">8k-12k</span>
+                        </div>
+                    </div>
+                    <div class="Review" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Review</span>
+                        </div>
+                        <div>
+                            <span style="color:orangered;font-size:15px;">3.5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="~/Images/Homepage.jpg" alt="Avatar" style="width:100%">
+            <div class="container">
+                <h4><b>Gali</b></h4>
+                <p>VR School<span>Special Class</span></p>
+                <div class="containerdetails" style="display:flex">
+                    <div class="NumberofStudents" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">#Students</span>
+                        </div>
+                        <div>
+                            <span style="font-size:15px;">210</span>
+                        </div>
+                    </div>
+                    <div class="Timing" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Timing</span>
+                        </div>
+                        <div>
+                            <span style="font-size:15px;">7pm-8pm</span>
+                        </div>
+                    </div>
+                    <div class="Pricing" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Pricing</span>
+                        </div>
+                        <div>
+                            <span style="font-size:15px;">8k-12k</span>
+                        </div>
+                    </div>
+                    <div class="Review" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Review</span>
+                        </div>
+                        <div>
+                            <span style="color:orangered;font-size:15px;">3.5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    @*<div class="card-group">
+        <div class="card w-25" style="border:1px solid #ccc">
+            <img class="card-img-top" src="~/Images/Homepage.jpg" style="width:15rem;" alt="Card image cap">
+            <div class="card-block">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        <div class="card w-25" style="border:1px solid #ccc">
+            <img class="card-img-top" src="~/Images/Homepage.jpg" style="width:301px;" alt="Card image cap">
+            <div class="card-block">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        <div class="card w-25" style="border:1px solid #ccc">
+            <img class="card-img-top" src="~/Images/Homepage.jpg" style="width:15rem;" alt="Card image cap">
+            <div class="card-block">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>*@
+
+</body>
+</html>
