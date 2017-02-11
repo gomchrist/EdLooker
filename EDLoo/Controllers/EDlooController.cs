@@ -25,5 +25,13 @@ namespace EDLoo.Controllers
         {
             return View();
         }
+        public ActionResult SpecialClasses()
+        {
+            return View();
+        }
+        public ActionResult Programs()
+        {
+            return View();
+        }
     }
 }

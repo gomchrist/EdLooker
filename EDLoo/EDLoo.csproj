@@ -134,6 +134,10 @@
     <Content Include="Images\School\Medical\Doctor3.jpg" />
     <Content Include="Images\School\Medical\FirstAid.jpg" />
     <Content Include="Images\School\Medical\LocationAddress.png" />
+    <Content Include="Images\School\Sports\GroundImage1.jpg" />
+    <Content Include="Images\School\Sports\GroundImage2.jpg" />
+    <Content Include="Images\School\Sports\GroundImage3.jpg" />
+    <Content Include="Images\School\Sports\GroundImage4.jpg" />
     <Content Include="Images\School\Transport\Bus1.jpg" />
     <Content Include="Images\School\Transport\Bus2.jpg" />
     <Content Include="Images\School\Transport\Bus3.jpg" />
@@ -155,6 +159,9 @@
     <Content Include="Images\School\Sports.png" />
     <Content Include="Images\School\Sports\cricket.png" />
     <Content Include="Images\School\Transportation.png" />
+    <Content Include="Images\SpecialClass\facebook.png" />
+    <Content Include="Images\SpecialClass\google-plus.png" />
+    <Content Include="Images\SpecialClass\twitter.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -174,6 +181,7 @@
     <Content Include="Views\EDloo\Index.cshtml" />
     <Content Include="Views\EDloo\POC1.cshtml" />
     <Content Include="Views\EDloo\School.cshtml" />
+    <Content Include="Views\EDloo\SpecialClasses.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
