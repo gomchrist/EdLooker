@@ -1,0 +1,318 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+<html>
+<head>
+    <title>Staff Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">EDLooker</a>
+            </div>
+           
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+    </nav>
+    <div class="container">
+    <div style="display:inline-flex;width:100%">
+        <div style="display:inline-block;width:18%">
+            <img src="~/Images/School/Medical/Doctor2.jpg" style="height:25%" />
+        </div>
+        <div style="display:inline-block;width:70%">
+            <div style="display:inline-flex;width:70%;padding:5px 0px 5px 0px">
+                <div style="display:block;">
+                    <span style="font-size:20px;color:orange">Krishnan RA</span>
+                </div>
+                
+                <div style="display:block;padding-top:4px;padding-left:10px;">
+                    <span style="font-size:16px">32-M</span>
+                </div>
+                <div style="display:block;padding-top:4px;padding-left:10px;">
+                    <img src="~/Images/School/locationicon.png" style="height:16px;width:16px;">
+                    <span style="font-size:16px">Coimbatore</span>
+                </div>
+            </div>
+            <div style="display:block;padding:5px 0px 5px 0px">
+                <span style="font-size:16px;font-style:italic;">Maths</span>
+            </div>    
+            <div style="display:block;padding:5px 0px 5px 0px">
+                <span style="font-size:16px;font-style:italic">B.Sc in Maths,M.Sc in Maths,B.Ed in Teaching</span>
+            </div>
+            <div style="display:block;padding:5px 0px 5px 0px;width:75%">
+                <div style="display:inline-block;border:1px solid #0094ff;padding:2px 4px 2px 4px;border-radius:2px;width:25%">
+                    <span style="color:#0094ff;font-size:18px">Followers</span>
+                    <span style="color:#0094ff;font-size:18px">720</span>
+                </div>
+                <div style="display:inline-block;width:50%">
+                    <img src="~/Images/School/star.png" style="height:26px;width:26px;vertical-align:middle" />
+                    <span style="vertical-align:middle;font-size:16px;color:red">3.2/5</span>
+                </div>
+            </div>
+            <div style="display:block">
+                <button style="background-color:#0094ff;color:white;border:1px solid #0094ff">Follow</button>
+            </div>
+            </div>
+        </div>
+        <ul class="nav nav-tabs" style="padding-top:10px;">
+            <li class="active"><a data-toggle="pill" href="#Profile">Profile</a></li>
+            <li><a data-toggle="pill" href="#QA">Q & A</a></li>
+            <li><a data-toggle="pill" href="#Videos">Videos</a></li>
+            <li><a data-toggle="pill" href="#Blogs">Blogs</a></li>
+            <li><a data-toggle="pill" href="#Training">Training</a></li>
+        </ul>
+        <div class="tab-content" style="padding-top:10px;">
+            <div id="Profile" class="tab-pane fade in active">
+                <div style="display:block">
+                    <div style="border-bottom:1px solid #edeaea"><h4 style="color:grey">Qualification</h4></div>
+                    <div>
+                        <ul>
+                            <li><span style="font-size:13px;">B.A in Physics at Sri Krishna Arts,Coimbatore,Tamilnadu</span></li>
+                            <li><span style="font-size:13px;">M.A in Physics at Sri Krishna Arts,Coimbatore,Tamilnadu</span></li>
+                            <li><span style="font-size:13px;">B.Ed in Teaching at Vigneshwar B.Ed College,Coimbatore,Tamilnadu</span></li>
+                        </ul>
+                            
+                    </div>
+                </div>
+                <div style="display:block">
+                    <div style="border-bottom:1px solid #edeaea"><h4 style="color:grey">Institution Experience</h4></div>
+                    <div>
+                        <ul>
+                            <li><span style="font-size:13px;">3 Years as Physics Teacher in Madevi School,Chennai,Tamilnadu</span></li>
+                            <li><span style="font-size:13px;">2 Years as Physics Teacher in Sandoor School,Chennai,Tamilnadu</span></li>
+                            <li><span style="font-size:13px;">4 Years as Physics Teacher in Viner School,Chennai,Tamilnadu</span></li>
+                            <li><span style="font-size:13px;">1 Years as Physics Teacher in Govt School School,Coimbatore,Tamilnadu</span></li>
+                            <li><span style="font-size:13px;">2 Years as Physics Teacher in Madevi School,Salem,Tamilnadu</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="display:block">
+                    <div style="border-bottom:1px solid #edeaea"><h4 style="color:grey">Certification</h4></div>
+                    <div>
+                        <ul>
+                            <li><span style="font-size:13px;">Criya Certified-Tutoring</span></li>
+                            <li><span style="font-size:13px;">Exceed Certified-Communication</span></li>
+                            <li><span style="font-size:13px;">Isha Certified-Patience</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="display:block">
+                    <div style="border-bottom:1px solid #edeaea"><h4 style="color:grey">Achievement</h4></div>
+                    <div>
+                        <ul>
+                            <li><span style="font-size:13px;">Student Karthick ranked 4th in National Level Learning Box meet in 2014-15</span></li>
+                            <li><span style="font-size:13px;">Student Suresh ranked 11th in National Level Learning Box meet in 2015-16</span></li>
+                            <li><span style="font-size:13px;">Student Dhivya ranked 22nd in ELF National Level IQ Test in 2014-15</span></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>   
+            <div id="QA" class="tab-pane fade">
+                <div class="QAcard" style="display:block;border:1px solid #edeaea;padding:5px 0px 5px 5px;border-radius:5px;">
+                    <div style="display:block">
+                        <div style="display:block">
+                            <span style="font-size:20px;font-weight:bold">How is India viewed outside India?</span>
+                        </div>
+                        <div style="display:block">
+                            <span style="font-size:12px;font-weight: bold;">Krishnan RA</span>
+                            <span style="font-size:11px;font-style: italic;">Answered:22 Feb 17</span>
+                            <span style="font-size:11px;font-style: italic;">Viewed:101</span>
+                        </div>
+                    </div>
+                    <div style="display:block">
+                        <p style="font-size:13px">
+                            Thermodynamics are built based on four laws of thermodynamics. We begins at the second law, which have three equivalent statements:
+                            It is impossible to convert the heat from the hot reservoir all into the work, i.e. there is no perfect engine
+                            It is impossible to convert the heat from the cold reservoir all into the hot reservoir without doing any work, i.e. There is no perfect refrigerator
+                            The exists a non-decreasing state function entropy, which is a measure of reversibility of thermodynamic processes, and the amount of lost work.
+                            They are obviously highly related to heat engines. Next, we come to the zeroth and the first laws. The zeroth law allows us to define a state function thermodynamics temperature, and the first law tells us that energy is always conserved. They are very important both conceptually and practically (you can look at how we calculate the efficiency of a heat engine) when the guys invent new engines!
+                        </p>
+                    </div>
+                    <div style="display:block">
+                        <div style="display:inline-block">
+                            <span style="border:1px solid #0094ff;padding:2px 2px 2px 2px;border-radius:3px;">Like</span>
+                        </div>
+                        <div style="display:inline-block">
+                            <span>Attachment</span>
+                        </div>
+                    </div>
+
+                    <div style="display:block;padding:10px 0px 10px 0px">
+                        <input style="width:50%;border-radius:3px" type="text" />
+                        <button>Suggest</button>
+                    </div>
+                </div>
+            </div>
+            <div id="Videos" class="tab-pane fade">
+                    <div class="Videocard" style="display:block;border:1px solid #edeaea;padding:5px 0px 5px 5px;border-radius:5px;">
+                        <div style="display:block">
+                            <span style="font-size:20px;font-weight:bold">How is India viewed outside India?</span>
+                        </div>
+                        <div style="display:inline-flex;padding-top:10px;">
+                            <div style="display:inline-block;width:60%;border-right:1px solid #edeaea">
+                                <iframe width="550" height="300" src="https://www.youtube.com/embed/tQcB9BLUoVI?controls=1"></iframe>
+                            </div>
+                            <div style="display:inline-block;width:40%;padding-left:10px;">
+                                <h4>Details</h4>
+                                <span style="padding:2px 5px 2px 5px;font-size:13px">
+                                    Thermodynamics are built based on four laws of thermodynamics. We begins at the second law, which have three equivalent statements:
+                                    It is impossible to convert the heat from the hot reservoir all into the work, i.e. there is no perfect engine
+                                </span>
+                            </div>
+                        </div>
+                       
+                        <div style="display:block;padding-top:10px;">
+                            <div style="display:inline-block">
+                                <span style="border:1px solid #0094ff;padding:2px 6px 2px 6px;border-radius:3px;font-size:13px">Like</span>
+                            </div>
+                            <div style="display:inline-block">
+                                <span>Attachment</span>
+                            </div>
+                        </div>
+                        <div style="display:block;padding:10px 0px 10px 0px">
+                            <input style="width:60%;border-radius:3px" type="text" placeholder="Add Comment" />
+                            <button>Suggest</button>
+                        </div>
+                    </div>
+                </div>
+            <div id="Blogs" class="tab-pane fade">
+                    <div class="BlogCard" style="display:block;border:1px solid #edeaea;padding:5px 0px 5px 5px;border-radius:5px;">
+                        <div style="display:block;padding:5px 0px 5px 0px">
+                            <span style="font-size:20px;font-weight:bold">How is India viewed outside India?</span>
+                        </div>
+                        <div style="display:block;padding:5px 0px 5px 0px">
+                            <p style="font-size:13px">
+                                Thermodynamics are built based on four laws of thermodynamics. We begins at the second law, which have three equivalent statements:
+                                It is impossible to convert the heat from the hot reservoir all into the work, i.e. there is no perfect engine
+                                It is impossible to convert the heat from the cold reservoir all into the hot reservoir without doing any work, i.e. There is no perfect refrigerator
+                                The exists a non-decreasing state function entropy, which is a measure of reversibility of thermodynamic processes, and the amount of lost work.
+                                They are obviously highly related to heat engines. Next, we come to the zeroth and the first laws. The zeroth law allows us to define a state function thermodynamics temperature, and the first law tells us that energy is always conserved. They are very important both conceptually and practically (you can look at how we calculate the efficiency of a heat engine) when the guys invent new engines!
+                            </p>
+                        </div>
+                        <div style="display:block;padding:5px 0px 5px 0px">
+                            <div style="display:inline-block">
+                                <span style="border:1px solid #0094ff;padding:2px 2px 2px 2px;border-radius:3px;">Like:32</span>
+                            </div>
+                            <div style="display:inline-block">
+                                <span style="padding:2px 2px 2px 2px">Views:1032</span>
+                            </div>
+                            <div style="display:inline-block">
+                                <span style="padding:2px 2px 2px 2px;">Updated on:22 March 2016</span>
+                            </div>
+                            <div style="display:inline-block">
+                                <span>Attachment</span>
+                            </div>
+                        </div>
+                        <div style="display:block;padding:5px 0px 5px 0px">
+                            <div>Tags
+                                <span style="background-color:black;color:white;padding:2px 2px 2px 2px;border-radius:2px">Industry</span>
+                                <span style="background-color:#ff0000;color:white;padding:2px 2px 2px 2px;border-radius:2px">Business</span>
+                                <span style="background-color:#0094ff;color:white;padding:2px 2px 2px 2px;border-radius:2px">Heat</span>
+                                <span style="background-color:#0094ff;color:white;padding:2px 2px 2px 2px;border-radius:2px">Thermodynamics</span>
+                                <span style="background-color:green;color:white;padding:2px 2px 2px 2px;border-radius:2px">Energy</span>
+                            </div>
+                        </div>
+                        <div style="display:block;padding:5px 0px 5px 0px">
+                            <button>Read</button>
+                        </div>
+                    </div>
+                </div>
+            <div id="Training" class="tab-pane fade">
+                    <div class="TrainingCard" style="display:block;border:1px solid #edeaea;padding:10px 0px 15px 10px;border-radius:5px;">
+                        <div style="display:block">
+                            <div style="display:inline-block;width:60%">
+                                <span style="font-size:12px;color:grey">Topic</span>
+                                <span style="font-size:18px;padding-left:5px;">State of Equilibirium</span>
+                            </div>
+                            <div style="display:inline-block;width:25%">
+                                <img src="~/Images/School/Main/Fees.png" style="height:20px;width:20px" />
+                                <span style="font-size:18px;padding-left:5px;">2500</span>
+                            </div>
+                        </div>
+                        <div style="display:block;margin-top:10px;">
+                            <div style="display:inline-block;width:25%">
+                                <div style="display:block">
+                                    <span style="font-size:12px;color:grey">From:</span>
+                                </div>
+                                <div style="display:block">
+                                    <span style="font-size:18px;padding-left:5px;">26th March 2017</span>
+                                </div>
+                            </div>
+                            <div style="display:inline-block;width:25%">
+                                <div style="display:block">
+                                    <span style="font-size:12px;color:grey">Time:</span>
+                                </div>
+                                <div style="display:block">
+                                    <span style="font-size:18px;padding-left:5px;">14:00 to 18:00</span>
+                                </div>
+                            </div>
+                            <div style="display:inline-block;width:20%">
+                                <div style="display:block">
+                                    <span style="font-size:12px;color:grey">Hours:</span>
+                                </div>
+                                <div style="display:block">
+                                    <span style="font-size:18px;padding-left:5px;">18</span>
+                                </div>
+                            </div>
+                            <div style="display:inline-block;width:25%">
+                                <div style="display:block">
+                                    <span style="font-size:12px;color:grey">Days</span>
+                                </div>
+                                <div style="display:block">
+                                    <span style="font-size:18px;padding-left:5px;">3 Days</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div style="display:block;margin-top:10px;" >
+                            <div style="display:inline-block;width:20%">
+                                <div style="display:block">
+                                    <span style="font-size:12px;color:grey">Attending</span>
+                                </div>
+                                <div style="display:block">
+                                    <span style="font-size:18px;padding-left:5px;">42</span>
+                                </div>
+                            </div>
+                            <div style="display:inline-block;width:20%">
+                                <div style="display:block">
+                                    <span style="font-size:12px;color:grey">Available Seats</span>
+                                </div>
+                                <div style="display:block">
+                                    <span style="font-size:18px;padding-left:5px;">18</span>
+                                </div>
+                            </div>
+                            <div style="display:inline-block;width:50%">
+                                <img src="~/Images/School/locationicon.png" style="height:20px;width:20px;" />
+                                <span style="font-size:18px;padding-left:5px;">Selvapuram Muthuswamy Colony</span>
+                            </div>
+                        </div>
+                        <div style="display:block">
+                            <span style="font-size:12px;color:grey">Discussion</span>
+                            <ul>
+                                <li style="font-size:13px">State of Equilibirium</li>
+                                <li style="font-size:13px">Molecules in Equilibirium</li>
+                                <li style="font-size:13px">Calculation of mass in Equilibirium</li>
+                                <li style="font-size:13px">Assesment</li>
+                                <li style="font-size:13px">Video Class on Real World application</li>
+                            </ul>
+                        </div>
+                        <div style="display:block">
+                            <button>Read More</button>
+                            <button>I'm Attending</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+</body>
+</html>

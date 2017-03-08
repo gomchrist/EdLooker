@@ -76,6 +76,15 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -85,6 +94,14 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -120,12 +137,28 @@
     <Content Include="Global.asax" />
     <Content Include="Images\Homepage.jpg" />
     <Content Include="Images\Logo.png" />
+    <Content Include="Images\School1.png" />
     <Content Include="Images\School\Academics.png" />
+    <Content Include="Images\School\Academics\Assessments.jpg" />
+    <Content Include="Images\School\Academics\brain_gold.jpg" />
+    <Content Include="Images\School\Academics\Creya-Curricullum.jpg" />
+    <Content Include="Images\School\Academics\Creya-Stem.jpg" />
+    <Content Include="Images\School\Academics\Creya_Learning.jpg" />
+    <Content Include="Images\School\Academics\Digital Content.jpg" />
+    <Content Include="Images\School\Academics\heymath logo_0.jpg" />
+    <Content Include="Images\School\Academics\IE-Activitybased learning.jpg" />
+    <Content Include="Images\School\Academics\Publisher-1.jpg" />
+    <Content Include="Images\School\Academics\Publisher.jpg" />
+    <Content Include="Images\School\Academics\Quris-Curricullum.jpg" />
+    <Content Include="Images\School\Academics\xseed-Curricullum.jpg" />
     <Content Include="Images\School\Achievement.png" />
     <Content Include="Images\School\Banner\1.jpg" />
     <Content Include="Images\School\Banner\2.jpg" />
     <Content Include="Images\School\Banner\3.jpg" />
     <Content Include="Images\School\Banner\4..jpg" />
+    <Content Include="Images\School\locationicon.png" />
+    <Content Include="Images\School\Main\dislike.png" />
+    <Content Include="Images\School\Main\like.png" />
     <Content Include="Images\School\Medical\AmbulanceService.jpg" />
     <Content Include="Images\School\Medical\CompanyLogo1.jpg" />
     <Content Include="Images\School\Medical\CompanyLogo2.jpg" />
@@ -134,10 +167,16 @@
     <Content Include="Images\School\Medical\Doctor3.jpg" />
     <Content Include="Images\School\Medical\FirstAid.jpg" />
     <Content Include="Images\School\Medical\LocationAddress.png" />
+    <Content Include="Images\School\Sports\Cricket Banner.jpg" />
+    <Content Include="Images\School\Sports\cricket.jpg" />
+    <Content Include="Images\School\Sports\Football Banner.jpg" />
     <Content Include="Images\School\Sports\GroundImage1.jpg" />
     <Content Include="Images\School\Sports\GroundImage2.jpg" />
     <Content Include="Images\School\Sports\GroundImage3.jpg" />
     <Content Include="Images\School\Sports\GroundImage4.jpg" />
+    <Content Include="Images\School\Sports\Hockey Banner.jpg" />
+    <Content Include="Images\School\Sports\Volleyball Banner.jpg" />
+    <Content Include="Images\School\star.png" />
     <Content Include="Images\School\Transport\Bus1.jpg" />
     <Content Include="Images\School\Transport\Bus2.jpg" />
     <Content Include="Images\School\Transport\Bus3.jpg" />
@@ -162,7 +201,15 @@
     <Content Include="Images\SpecialClass\facebook.png" />
     <Content Include="Images\SpecialClass\google-plus.png" />
     <Content Include="Images\SpecialClass\twitter.png" />
-    <Content Include="Web.config" />
+    <Content Include="Styles\animation.css" />
+    <Content Include="Styles\TutorProfileClassScreenResolution.css" />
+    <Content Include="Styles\SpecialClassScreenResolution.css" />
+    <Content Include="Styles\SchoolScreenResolution.css" />
+    <Content Include="Styles\CollegeScreenResolution.css" />
+    <Content Include="Styles\TutorProfile.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -182,6 +229,14 @@
     <Content Include="Views\EDloo\POC1.cshtml" />
     <Content Include="Views\EDloo\School.cshtml" />
     <Content Include="Views\EDloo\SpecialClasses.cshtml" />
+    <None Include="Properties\PublishProfiles\EDloo V1.0.1.pubxml" />
+    <None Include="Properties\PublishProfiles\EDloo V1.0.2.pubxml" />
+    <None Include="Properties\PublishProfiles\EDloo V1.0.3.pubxml" />
+    <None Include="Properties\PublishProfiles\EDLoo V1.0.pubxml" />
+    <None Include="Properties\PublishProfiles\V1.0.0.0.4.pubxml" />
+    <Content Include="Views\EDloo\TutorProfile.cshtml" />
+    <None Include="Properties\PublishProfiles\V1.0.0.0.5.pubxml" />
+    <Content Include="Views\EDloo\College.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

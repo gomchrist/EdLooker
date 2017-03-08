@@ -1,0 +1,1889 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/Styles/animation.css" />
+    <title>School</title>
+    <style>
+     body {
+        background-color:#f5f5f5;
+        }
+    </style>
+    <style>
+    .content2 {
+            min-width: 1000px;
+            margin-left: 10px;
+            overflow: hidden;
+         
+        }
+    </style>
+    <style>
+     .content1 {
+            min-width: 1000px;
+            margin-left: 10px;
+            overflow: hidden;
+            height: 130px;
+        }
+     .SchoolNameDiv {
+            min-width: 1400px;
+            margin-left: 10px;
+            overflow: hidden;
+            
+            height: 100px;
+        }
+     .card {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 40%;
+            border-radius: 5px;
+            background-color: white;
+            overflow: hidden;
+            min-width: 700px;
+        }
+     .card:hover {
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            }
+     img {
+            border-radius: 5px 5px 0 0;
+        }
+     .container {
+            padding: 2px 16px;
+        }
+     .Buscontainer {
+            padding: 15px 0px;
+            background-color:#689c68;
+        }
+    </style>
+    <style>
+     .divcard19 {
+        display:inline-block;
+        width:12.5%;
+        margin-top:15px;
+        }
+     .card19 {
+            transition: 0.3s;
+            width: 10%;
+            height: 50px;
+            border-radius: 1px;
+          
+          
+        }
+     .card20 {
+          
+            transition: 0.3s;
+            width: 10%;
+            height: 50px;
+            border-radius: 1px;
+          
+        
+        }
+        .card21 {
+            transition: 0.3s;
+            height: auto;
+        }
+     .card20:hover {
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            }
+     img {
+            border-radius: 5px 5px 0 0;
+        }  
+     .container {
+            padding: 0px 8px;
+            text-align:center;
+        }
+     .textheader {
+            
+            font-size:12px;
+        }
+     .textheader21 {
+            font-size: 15px;
+
+        }
+     .cardvalue {
+        font-size:18px;
+        }
+    </style>
+    <style>
+     .div21header {
+            text-align: center;
+        }
+     .div21header span {
+              
+                margin-left: 6px;
+            }
+     .div21footer {
+            text-align: center;
+            margin-top: 10px;
+        }
+     .div21footer span {
+              
+                font-size: 22px;
+                color: #689c68;
+           
+            }  
+     .div20header {
+            margin-left: 20px;
+            margin-top:10px;
+        }
+     .div20header span {
+            margin-left:10px;
+          
+            }    
+     .div20footer {
+           
+            font-size:13px;
+            margin-top:10px;
+        }
+    </style>
+    <script>
+        function BindData(data)
+        {
+
+        }
+    </script>
+    <style>
+      .cardtable {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 40%;
+            border-radius: 5px;
+            background-color: white;
+            overflow: hidden;
+            min-width: 300px;
+        }
+      .cardheader {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 40%;
+            border-radius: 5px;
+            background-color: white;
+            overflow: hidden;
+            min-width: 700px;
+           
+        }
+        .SchoolNameContent {
+            width: 40%;
+            top: 2px;
+            height: 80px;
+            color: black;
+        }  
+        
+      .card500 {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 40%;
+            border-radius: 5px;
+            background-color: white;
+            overflow: hidden;
+            min-width: 500px;
+        }
+      .card300 {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 40%;
+            border-radius: 5px;
+            background-color: white;
+            overflow: hidden;
+            min-width: 300px;
+        }
+      .card400 {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 40%;
+            border-radius: 5px;
+            background-color: white;
+            overflow: hidden;
+            min-width: 400px;
+        }
+      .card350 {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+           
+            border-radius: 1px;
+            background-color: white;
+            overflow: hidden;
+            max-width: 350px;
+        }
+      .card400height150 {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 40%;
+            border-radius: 5px;
+            background-color: white;
+            overflow: hidden;
+            min-width: 400px;
+            max-height:150px;
+        }
+      div.SchoolNameContent h4 {
+             margin: auto;
+            line-height: 51px;
+            
+        }
+    </style>
+    <style>
+        .iconwithspanimg {
+      float:left;
+      height:32px;
+      width:32px;
+        }
+        .iconwithspanlabel{
+            color:cadetblue;
+      float:right;
+      padding-top:6px;
+      padding-left:8px;
+      padding-right:8px;
+      font-family:Arial, Helvetica, sans-serif;
+
+        }
+        .iconwithspan
+        {
+            border-radius: 25px;
+            border:1px solid rgba(0,0,0,0.2);
+            
+        }
+    </style>
+    <style>
+     #sportslisttable {
+    width:600px;
+}
+    .tablecontainer div {
+    display:inline-block;
+}
+    </style>
+    <style>
+           .card {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 30%;
+            display: -webkit-inline-box;
+            margin: 0 2px;
+        }
+
+            .card:hover {
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            }
+
+        .container {
+            padding: 2px 16px;
+        }
+        .ListOfData {
+        text-align:center;
+        margin-top:50px;
+       
+     
+        }
+            .ListOfData > div {
+                display: inline-block;
+                vertical-align: top;
+            }
+    </style>
+    <style>
+    .card250 {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 20%;
+            border-radius: 5px;
+            background-color: white;
+            overflow: hidden;
+            min-width: 250px;
+        }
+    .card250height150 {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 20%;
+            border-radius: 5px;
+            background-color: white;
+            overflow: hidden;
+            min-width: 250px;
+            max-height:150px;
+        }
+    .card250height300 {
+            transition: 0.3s;
+            width: 30%;
+            border-radius: 5px;
+           
+            overflow: hidden;
+            min-width: 250px;
+            max-height:300px;
+        }
+        .card400 {
+            transition: 0.3s;
+            width: 30%;
+            border-radius: 5px;
+            overflow: hidden;
+            min-width: 400px;
+        }  
+        .card200 {
+            transition: 0.3s;
+            width: 20%;
+            border-radius: 5px;
+            overflow: hidden;
+            
+        }  
+    .card:hover {
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            }
+    </style>
+    <style>
+        .containerdetails {
+            font-size: 10px;
+            margin-bottom: 4px;
+        }
+        ul#menu li {
+            border-radius: 2px;
+            border: 1px solid cadetblue;
+            display: inline;
+            color:cadetblue;
+            font-size: 14px;
+            float: left;
+            padding: 4px 4px 4px 4px;
+            margin-left: 2px;
+            margin-top: 2px;
+            margin-bottom: 4px;
+        }
+        ul menu {
+        }
+   </style>
+    <style>
+        .panelgreen {
+            padding: 15px 0px;
+            background-color: #689c68;
+        }
+        .panelcadetblue {
+            padding: 15px 0px;
+            background-color: cadetblue;
+        }
+        .panelcadetgrey {
+            padding: 15px 0px;
+            background-color: #808080;
+        }
+        .panelcadetgrey span {
+            color:white;
+            }
+            .panelcadetblue span {
+            color:white;
+            }
+    </style>
+    <style>
+        .card600 {
+            transition: 0.3s;
+            width: 20%;
+            border-radius: 5px;
+            background-color: white;
+            overflow: hidden;
+            min-width: 600px;
+            display:inline-flex;
+        }
+        .height350 {
+            transition: 0.3s;
+            width: 20%;
+            border-radius: 5px;
+            background-color: white;
+            overflow: hidden;
+            min-height: 350px;
+        }
+        .photocard190 {
+            transition: 0.3s;
+          
+           
+            max-width:190px;
+        }
+       
+        .photocard180 {
+            transition: 0.3s;
+            width: 20%;
+            overflow: hidden;
+            
+            max-width:180px;
+        }
+        .RoundedImage {
+            height: 80px;
+            width: 120px;
+            border-radius: 50%;
+        }
+        .NearestHospital tr, td {
+            padding: 15px;
+            text-align: left;
+        }
+        .NearestHospital td {
+        border-bottom:1px solid rgba(0,0,0,0.2);
+
+        }
+    </style>
+    <style>
+        .fadein {
+            position: absolute;
+            top: 0px;
+        }
+
+            .fadein img {
+                position: absolute;
+                left: -30px;
+                top: 0;
+                -webkit-animation-name: fade;
+                -webkit-animation-iteration-count: infinite;
+                -webkit-animation-duration: 6s;
+                animation-name: fade;
+                animation-iteration-count: infinite;
+                animation-duration: 6s;
+            }
+
+        @@-webkit-keyframes fade {
+            0% {
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            33% {
+                opacity: 1;
+            }
+
+            53% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @@keyframes fade {
+            0% {
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            33% {
+                opacity: 1;
+            }
+
+            53% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        #f1 {
+            background-color: lightblue;
+        }
+
+        #f2 {
+            -webkit-animation-delay: -4s;
+            background-color: yellow;
+        }
+
+        #f3 {
+            -webkit-animation-delay: -2s;
+            background-color: lightgreen;
+        }
+    </style>
+    <style>
+        .SchoolBanner {
+          width:1400px;
+            min-height: 350px;
+            max-height: 351px;
+        }
+    </style>
+    <style>
+        div.scrollmenu {
+            background-color: white;
+            overflow: auto;
+            white-space: nowrap;
+        }
+            div.scrollmenu img {
+                display: inline-block;
+                color: white;
+                text-align: center;
+                padding: 10px;
+                text-decoration: none;
+            }
+            div.scrollmenu img:hover {
+                    background-color: white;
+            }
+    </style>
+    <style>
+        #routetable {
+            display: block;
+        }
+            #routetable td {
+                float:left;
+                display: inline-block;
+                border: 1px solid #FFFFFF;
+                background: #ffffd3;
+                border: 1px solid #FFFFFF;
+            }
+        #busdetails {
+        display: block;
+        }
+        #busdetails td {
+                display: inline-block;
+                border: 1px solid #FFFFFF;
+                background: #c9ffcf;
+                border: 1px solid #FFFFFF;
+            }
+    </style>
+    <style>
+        .fontblack {
+            color: black;
+        }
+
+        .font14 {
+            font-size: 14px;
+        }
+
+        .font18 {
+            font-size: 18px;
+        }
+
+        .font20 {
+            font-size: 20px;
+        }
+
+        .font22 {
+            font-size: 22px;
+        }
+
+        .font26 {
+            font-size: 26px;
+        }
+
+        .font30 {
+            font-size: 30px;
+        }
+
+        .font34 {
+            font-size: 34px;
+        }
+    </style>
+</head>
+<body>
+    <div ng-app="School">
+        <div class="SchoolBanner">
+            <div class="ImagesBanner" style="display:inline-flex;width:1400px;">
+                <div class="fadein">
+                    <img id="f3" src="~/Images/School/Banner/1.jpg" style="height:350px;width:1400px;">
+                    <img id="f2" src="~/Images/School/Banner/2.jpg" style="height:350px;width:1400px;">
+                    <img id="f1" src="~/Images/School/Banner/3.jpg" style="height:350px;width:1400px;">
+                </div>
+                @*<img src="img_avatar2.png" alt="Avatar" style="width:100%">*@
+
+            </div>
+        </div>
+       
+        <div class="SchoolNameContent" style="display:inline-flex;width:1400px;vertical-align:middle">
+            <div style="display:inline-block;vertical-align:middle;padding-left:20px;padding-top:30px;width:40%;">
+                <div style="display:block">
+                    <span style="font-size:8px;">Name</span>
+                </div>
+                <div>
+                    <div>
+                        <span class="pullDown" style="font-size:24px;margin-left:5px;">RAYANSH CBSE SCHOOL</span>
+                    </div>
+                </div>
+            </div>
+                <div style="display:inline-block;vertical-align:middle;padding-top:30px;padding-left:20px;width:15%;">
+                    <div style="display:block">
+                        <span style="font-size:8px;color:#0094ff">LearningBox Rating</span>
+                    </div>
+                    <div>
+                        <img src="~/Images/School/star.png" style="height:26px;width:26px;vertical-align:middle" />
+                        <span style="vertical-align:middle;font-size:16px;color:red">3.2/5</span>
+                    </div>
+                </div>
+                <div style="display:inline-block;vertical-align:middle;padding-top:30px;padding-left:20px;width:20%;">
+                    <div style="display:block">
+                        <span style="font-size:8px;">Location</span>
+                    </div>
+                    <div>
+                        <img src="~/Images/School/locationicon.png" style="height:32px;width:32px;vertical-align:middle" />
+                        <span style="vertical-align:middle;font-size:16px">Coimbatore,Tamil Nadu,India</span>
+                    </div>
+                </div>
+                <div style="display:inline-block;vertical-align:middle;padding-top:30px;padding-left:20px;width:20%;">
+                    <div style="display:block">
+                        <span style="font-size:8px;">Board</span>
+                    </div>
+                    <div>
+                        <img src="~/Images/School/Main/Board.png" style="height:32px;width:32px;vertical-align:middle" />
+                        <span style="vertical-align:middle;font-size:16px">CBSE</span>
+                    </div>
+                </div>
+            </div>
+        
+        @*School basic Details*@
+        <div style="display:inline-flex;width:1400px;padding-top:10px; ">
+            <div style="display:inline-block;width:30%;">
+                <div class="card20 pullUp" style="display:inline-block;width:90%;">
+                    <div class="div20header">
+                        <div style="display:table">
+                            <img src="~/Images/School/Main/Class.png" style="vertical-align: text-bottom">
+                            <span class="font14">Residential School</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <div style="display:inline-block;width:30%;">
+                <div class="card20 pullUp" style="display:inline-block;width:90%;">
+                    <div class="div20header"><img src="~/Images/School/Main/Phone.png" style="vertical-align: text-bottom">
+                    <span class="font14">0422-2345697,0422-2345697</span></div>
+               
+                </div>
+            </div>
+            <div style="display:inline-block;width:30%;">
+                <div class="card20 pullUp" style="display:inline-block;width:90%;">
+                    <div class="div20header"><img src="~/Images/School/Main/Mail.png" style="vertical-align: text-bottom">
+                    <span class="font14">principal@sskit.com</span></div>
+                
+                </div>
+            </div>
+            <div style="display:inline-block;width:20%;">
+                <div style="display:inline-block;width:90%;">
+                    <div class="div20header">
+                        <img src="~/Images/SpecialClass/facebook.png" style="vertical-align: middle">
+                        <img src="~/Images/SpecialClass/google-plus.png" style="vertical-align: middle">
+                        <img src="~/Images/SpecialClass/twitter.png" style="vertical-align: middle">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        @*School Ratio Details*@
+        <div style="display:inline-flex;width:1400px;margin-top:20px;">
+            <div style="display:inline-block;width:25%;">
+                <div class="card21" style="display:inline-block;width:90%;">
+                    <div class="div21header"><span>Total Students</span></div>
+                    <div class="div21footer"><img src="~/Images/School/Main/NumberofStudent.png" style="vertical-align: top"><span>3,262</span></div>
+                    @*<div class="container">
+                            <span style="color:#044f00" class="cardvalue"><b>86%</b></span>
+                            <p>Interior Designer</p>
+                        </div>*@
+                </div>
+            </div>
+            <div style="display:inline-block;width:25%;">
+                <div class="card21" style="display:inline-block;width:95%;" ng-click="BindData(Transportation);">
+                    <div class="div21header"><span>Student:Teacher Ratio</span></div>
+                    <div class="div21footer"><img src="~/Images/School/Main/StaffStudentRatio.png" style="vertical-align: top"><span>20:1</span></div>
+                    @*<div class="container">
+                            <span style="color:#044f00" class="cardvalue"><b>86%</b></span>
+                            <p>Interior Designer</p>
+                        </div>*@
+                </div>
+            </div>
+            <div style="display:inline-block;width:25%;">
+                <div class="card21" style="display:inline-block;width:95%;">
+                    <div class="div21header"><span>Response Time</span></div>
+                    <div class="div21footer"><img src="~/Images/School/Main/Response.png" style="vertical-align: top"><span>7 Days</span></div>
+                    @*<div class="container">
+                            <span style="color:#044f00" class="cardvalue"><b>86%</b></span>
+                            <p>Interior Designer</p>
+                        </div>*@
+                </div>
+            </div>
+            <div style="display:inline-block;width:25%;">
+                <div class="card21" style="display:inline-block;width:95%;">
+                    <div class="div21header"><span>Fees</span></div>
+                    <div class="div21footer"><img src="~/Images/School/Main/Fees.png" style="vertical-align: top"><span>24,000/3 Months</span></div>
+                    @*<div class="container">
+                            <span style="color:#044f00" class="cardvalue"><b>86%</b></span>
+                            <p>Interior Designer</p>
+                        </div>*@
+                </div>
+            </div>
+        </div>
+        <div ng-controller="databingschool" style="max-width:1400px;">
+            <div style="display:inline-flex;width:1400px;height:80px;margin-top:10px;background-color:#ffffff;">
+                <div class="divcard19">
+                    <div class="card19" style="display:inline-block;width:95%;">
+                        <div style="text-align:center"><b><a data-toggle="pill" href="#Academics" class="textheader" style="color:black;font-size:10px;">Academics-Partnership</a></b></div>
+                        <div style="text-align:center"><img src="~/Images/School/Academics.png" alt="Avatar" style="width:20%"></div>
+                        @*<div class="container">
+                    <span style="color:#044f00" class="cardvalue"><b>86%</b></span>
+                    <p>Interior Designer</p>
+                </div>*@
+                    </div>
+                </div>
+                
+                <div class="divcard19">
+                    <div class="card19" style="display:inline-block;width:95%;" ng-click="BindData(Transportation);">
+                        <div style="text-align:center"><b><a data-toggle="pill" href="#Transport" class="textheader" style="color:black;font-size:10px;">Transportation</a></b></div>
+                        <div style="text-align:center"><img src="~/Images/School/Transportation.png" alt="Avatar" style="width:20%"></div>
+                        @*<div class="container">
+                                <span style="color:#044f00" class="cardvalue"><b>86%</b></span>
+                                <p>Interior Designer</p>
+                            </div>*@
+                    </div>
+                </div>
+                
+                
+                <div class="divcard19">
+                    <div class="card19" style="display:inline-block;width:95%;">
+                        <div style="text-align:center"><b><a data-toggle="pill" href="#Sports" class="textheader" style="color:black;font-size:10px;">Sports</a></b></div>
+                        <div style="text-align:center"><img src="~/Images/School/Sports.png" alt="Avatar" style="width:20%"></div>
+                        @*<div class="container">
+                                <span style="color:#044f00" class="cardvalue"><b>86%</b></span>
+                                <p>Interior Designer</p>
+                            </div>*@
+                    </div>
+                </div>
+                <div class="divcard19">
+                    <div class="card19" style="display:inline-block;width:95%;">
+                        <div style="text-align:center"><b><a data-toggle="pill" href="#Extracurricular" class="textheader" style="color:black;font-size:10px;">Extra Curricular</a></b></div>
+                        <div style="text-align:center"><img src="~/Images/School/Extra Curricular.png" alt="Avatar" style="width:20%"></div>
+                        @*<div class="container">
+                    <span style="color:#044f00" class="cardvalue"><b>86%</b></span>
+                    <p>Interior Designer</p>
+                </div>*@
+                    </div>
+                </div>
+                <div class="divcard19">
+                    <div class="card19" style="display:inline-block;width:95%;">
+                        <div style="text-align:center"><b><a data-toggle="pill" href="#Hostel" class="textheader" style="color:black;font-size:10px;">Hostel</a></b></div>
+                        <div style="text-align:center"><img src="~/Images/School/Hostel.png" alt="Avatar" style="width:20%"></div>
+                        @*<div class="container">
+                    <span style="color:#044f00" class="cardvalue"><b>86%</b></span>
+                    <p>Interior Designer</p>
+                </div>*@
+                    </div>
+                </div>
+                <div class="divcard19">
+                    <div class="card19" style="display:inline-block;width:95%;">
+                        <div style="text-align:center"><b><a data-toggle="pill" href="#Achievements" class="textheader" style="color:black;font-size:10px;font-size:10px;">Achievement</a></b></div>
+                        <div style="text-align:center"><img src="~/Images/School/Achievement.png" alt="Avatar" style="width:20%"></div>
+                        @*<div class="container">
+                                <span style="color:#044f00" class="cardvalue"><b>86%</b></span>
+                                <p>Interior Designer</p>
+                            </div>*@
+                    </div>
+                </div>
+                
+                <div class="divcard19">
+                    <div class="card19" style="display:inline-block;width:95%;">
+                        <div style="text-align:center"><b><a data-toggle="pill" href="#MedicalAssistance" class="textheader" style="color:black;font-size:10px;">Medical Assistance</a></b></div>
+                        <div style="text-align:center"><img src="~/Images/School/HealthCare.png" alt="Avatar" style="width:20%"></div>
+                        @*<div class="container">
+                    <span style="color:#044f00" class="cardvalue"><b>86%</b></span>
+                    <p>Interior Designer</p>
+                </div>*@
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" style="max-width:1400px;">
+                <div id="Hostel" class="tab-pane fade">
+                
+                    <div style="display:inline-flex;width:1400px;margin-top:20px;">
+                        <div style="display:inline-block;width:33%;">
+                            <div class="card21" style="display:inline-block;width:90%;background-color:white">
+                                <div class="div21header" style="background-color:rgba(61, 158, 255, 0.59);padding:4px 4px 4px 4px;color:white">
+                                    <span class="font18">Rooms</span>
+                                </div>
+                                <div class="div21footer">
+                                    <table style="width:95%">
+                                        <tr>
+                                            <td style="float:right">Number of Rooms</td>
+                                            <td>90</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="float:right">Students Per Room</td>
+                                            <td>3 and 4 Sharing</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="float:right">Room Cost</td>
+                                            <td>10,000/Quater</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="float:right">AC</td>
+                                            <td><img src="~/Images/School/Main/dislike.png" style="height:36px;width:36px;" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="float:right">Food</td>
+                                            <td>Veg and Non-Veg</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="float:right">Food Cost</td>
+                                            <td>3000/Month aprox.</td>
+                                        </tr>
+                                    </table>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div style="display:inline-block;width:33%;">
+                            <div class="card21" style="display:inline-block;width:90%;background-color:white">
+                                <div class="div21header" style="background-color:rgba(61, 158, 255, 0.59);padding:4px 4px 4px 4px;color:white">
+                                    <span class="font18">Entertainment</span>
+                                </div>
+                                <div class="div21footer">
+                                    <table style="width:100%">
+                                        <tr>
+                                            <td style="float:right">Outing Time</td>
+                                            <td >Weekly Twice</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="float:right">Gadgets</td>
+                                            <td>Not Allowed</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="float:right">Canteen</td>
+                                            <td><img src="~/Images/School/Main/like.png" style="height:36px;width:36px;" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="float:right">GYM</td>
+                                            <td><img src="~/Images/School/Main/like.png" style="height:36px;width:36px;" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="float:right">Cinemal Hall</td>
+                                            <td><img src="~/Images/School/Main/dislike.png" style="height:36px;width:36px;" /></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div style="display:inline-block;width:33%;">
+                            <div class="card21" style="display:inline-block;width:90%;background-color:white">
+                                <div class="div21header" style="background-color:rgba(61, 158, 255, 0.59);padding:4px 4px 4px 4px;color:white">
+                                    <span class="font18">Parents</span>
+                                </div>
+                                <div class="div21footer">
+                                    <table style="width:100%">
+                                        <tr>
+                                            <td style="float:right">Parents Visiting TIme</td>
+                                            <td>Any time</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="float:right">Hostel Location</td>
+                                            <td>Inside Campus</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="float:right">Security Camera</td>
+                                            <td>Every Room</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="float:right">Warden-Student Ratio</td>
+                                            <td>1:14</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="float:right">Communication</td>
+                                            <td>Phone,Skype</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="float:right">Emergency Contact</td>
+                                            <td>0422-43658632</td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display:inline-flex;width:1400px;margin-top:20px;">
+                        <div style="display:inline-block;width:40%;">
+                            <div class="card21 slideUp" style="display:inline-block;width:90%;background-color:white">
+                                <div class="div21header" style="background-color:rgba(61, 158, 255, 0.59);padding:4px 4px 4px 4px;color:white">
+                                    <span class="font18">Comfort</span>
+                                </div>
+                                <div class="div21footer">
+                                    <table style="width:100%">
+                                        <tr>
+                                            <td>Laundry Service</td>
+                                            <td>Yes</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hostel Location</td>
+                                            <td>Inside Campus</td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div style="display:inline-block;width:60%;">
+                            <div class="card21" style="display:inline-block;width:90%;background-color:rgba(61, 158, 255, 0.59);color:White">
+                                <div class="div21header">
+                                    <span>Comfort</span>
+                                </div>
+                                <div class="div21footer">
+                                    <div class="scrollmenu">
+                                     
+                                        <div class="card21" style="display:inline-block;">
+                                            <div class="div21header"><span>Total Students</span></div>
+                                            <div class="div21footer">
+                                                <img src="~/Images/School/Sports/GroundImage2.jpg" style="height:120px;width:250px;padding:2px 2px 2px 2px;vertical-align: top" />
+                                            </div>
+                                        </div>
+                                        <div class="card21" style="display:inline-block;">
+                                            <div class="div21header"><span>Total Students</span></div>
+                                            <div class="div21footer">
+                                                <img src="~/Images/School/Sports/GroundImage2.jpg" style="height:120px;width:250px;padding:2px 2px 2px 2px;vertical-align: top" />
+                                            </div>
+                                        </div>
+                                        <div class="card21" style="display:inline-block;">
+                                            <div class="div21header"><span>Total Students</span></div>
+                                            <div class="div21footer">
+                                                <img src="~/Images/School/Sports/GroundImage2.jpg" style="height:120px;width:250px;padding:2px 2px 2px 2px;vertical-align: top" />
+                                            </div>
+                                        </div>
+                                        <div class="card21" style="display:inline-block;">
+                                            <div class="div21header"><span>Total Students</span></div>
+                                            <div class="div21footer">
+                                                <img src="~/Images/School/Sports/GroundImage2.jpg" style="height:120px;width:250px;padding:2px 2px 2px 2px;vertical-align: top" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display:inline-flex;width:1400px;margin-top:20px;">
+                        <div style="display:inline-block;width:100%;">
+
+                            <div class="card21" style="display:inline-block;width:100%;text-align:center;background-color:white">
+                                <div style="padding:15px 10px 15px 10px;text-align:left;">
+                                    <span style="font-size:20px;">Photos</span>
+                                </div>
+                                <div class="scrollmenu">
+                                    <img src="~/Images/School/Sports/GroundImage2.jpg" style="height:20%;width:20%;padding:2px 2px 2px 2px;" />
+                                    <img src="~/Images/School/Sports/GroundImage2.jpg" style="height:20%;width:20%;padding:2px 2px 2px 2px;" />
+                                    <img src="~/Images/School/Sports/GroundImage2.jpg" style="height:20%;width:20%;padding:2px 2px 2px 2px;" />
+                                    <img src="~/Images/School/Sports/GroundImage2.jpg" style="height:20%;width:20%;padding:2px 2px 2px 2px;" />
+                                    <img src="~/Images/School/Sports/GroundImage2.jpg" style="height:20%;width:20%;padding:2px 2px 2px 2px;" />
+                                    <img src="~/Images/School/Sports/GroundImage2.jpg" style="height:20%;width:20%;padding:2px 2px 2px 2px;" />
+                                    <img src="~/Images/School/Sports/GroundImage2.jpg" style="height:20%;width:20%;padding:2px 2px 2px 2px;" />
+                                    <img src="~/Images/School/Sports/GroundImage2.jpg" style="height:20%;width:20%;padding:2px 2px 2px 2px;" />
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                            </div>
+                <div id="Transport" class="tab-pane fade">
+                    <div style="display:inline-flex;width:1400px;margin-top:20px;">
+                        <div style="display:inline-block;width:50%;">
+                            <div class="card21" style="display:inline-block;width:95%;background-color:White">
+                                <div style="background-color:#fbf726;color:black;padding:10px 10px 10px 10px;text-align:center">
+                                    <span>Bus Routes</span>
+                                </div>
+                                <div class="div21footer">
+                                    <table id="routetable" style="width:100%" >
+                                        <tr>
+                                            <td>Selvapuram</td>
+                                            <td>R.S PURAM</td>
+                                            <td>THADAGAM ROAD</td>
+                                            <td>KANNAPA NAGAR</td>
+                                            <td>MARUDHAMALAI</td>
+                                            <td>VADAVALLI</td>
+                                            <td>HOPES</td>
+                                            <td>PEELAMEDU</td>
+                                            <td>THONDAMUTHUR</td>
+                                            <td>SELVAPURAM</td>
+                                            <td>PERUR</td>
+                                            <td>PACHAPALAYAM</td>
+                                            
+                                         
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display:inline-block;width:30%;">
+                            <div class="card21" style="display:inline-block;width:90%;background-color:White">
+                                <div style="background-color:#fbf726;color:black;padding:10px 10px 10px 10px;text-align:center">
+                                    <span>Bus Details</span>
+                                </div>
+                                <div class="div21footer">
+                                    <table id="busdetails" style="width:100%">
+                                        <tr>
+                                            <td style="text-align:center">
+                                                <span style="display:block;color:white;font-size:14px">Nos of Bus</span>
+                                                <span style="display:block;color:#808080">40</span>
+                                            </td>
+                                            <td style="text-align:center">
+                                                <span style="display:block;color:white;font-size:14px">Fees</span>
+                                                <span style="display:block;color:#808080">Aprox 14000/Year</span>
+                                            </td>
+                                            <td style="text-align:center">
+                                                <span style="display:block;color:white;font-size:14px">AC</span>
+                                                <img src="~/Images/School/Main/dislike.png" style="height:30px;width:30px;display:block" />
+                                            </td>
+                                            
+                                         </tr>
+                                    </table>
+                                </div>
+                            </div>
+                          
+                        </div>
+                        <div style="display:inline-block;width:20%;">
+                            <div class="card21" style="display:inline-block;width:90%;background-color:White">
+                                <div style="background-color:#fbf726;color:black;padding:10px 10px 10px 10px;text-align:center">
+                                    <span>Tracking Software</span>
+                                </div>
+                                <div style="text-align:center">
+                                    <img src="~/Images/School/Transport/BusTrackingcompanylogo.png" style="width:160px;height:100px;" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>     
+                   
+                    <div style="display:inline-flex;width:1400px;margin-top:20px;">
+                        <div style="display:inline-block;width:100%;">
+
+                            <div class="card21" style="display:inline-block;width:100%;text-align:center;background-color:white">
+                                <div style="padding:15px 10px 15px 10px;text-align:left;">
+                                    <span style="font-size:20px;">Photos</span>
+                                </div>
+                                <div class="scrollmenu">
+                                    <img src="~/Images/School/Sports/GroundImage2.jpg" style="height:20%;width:20%;padding:2px 2px 2px 2px;" />
+                                    <img src="~/Images/School/Sports/GroundImage2.jpg" style="height:20%;width:20%;padding:2px 2px 2px 2px;" />
+                                    <img src="~/Images/School/Sports/GroundImage2.jpg" style="height:20%;width:20%;padding:2px 2px 2px 2px;" />
+                                    <img src="~/Images/School/Sports/GroundImage2.jpg" style="height:20%;width:20%;padding:2px 2px 2px 2px;" />
+                                    <img src="~/Images/School/Sports/GroundImage2.jpg" style="height:20%;width:20%;padding:2px 2px 2px 2px;" />
+                                    <img src="~/Images/School/Sports/GroundImage2.jpg" style="height:20%;width:20%;padding:2px 2px 2px 2px;" />
+                                    <img src="~/Images/School/Sports/GroundImage2.jpg" style="height:20%;width:20%;padding:2px 2px 2px 2px;" />
+                                    <img src="~/Images/School/Sports/GroundImage2.jpg" style="height:20%;width:20%;padding:2px 2px 2px 2px;" />
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                 
+                </div>
+                <div id="Canteen" class="tab-pane fade">
+                    <h3>Transport</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div id="MedicalAssistance" class="tab-pane fade">
+                    <div style="display:inline-flex;width:1400px;margin-top:20px;">
+                        
+                        <div style="display:inline-block;width:60%;border-color:white">
+                            
+                            <div class="card21" style="display:inline-block;width:95%;">
+                                <div style="background-color:#ff6a00;color:white;padding:10px 10px 10px 10px;text-align:center">
+                                    <span>Doctors in Campus</span>
+                                </div>
+                                <div style="display:inline-table;width:100%;text-align:justify;margin-left:auto;margin-right:auto;background-color:white">
+                                    <div class="photocard190" style="padding:2px 2px 2px 2px;display:table-cell;width:33%; vertical-align:middle; text-align:center">
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" class="RoundedImage" />
+                                        <div>
+                                            <span style="font-size:12px; display:block">Krishnan RA</span>
+                                            <span style="font-size:8px;display:block">M.B.B.S</span>
+                                            <span style="font-size:8px;background-color:cornflowerblue;color:white;padding:5px 10px 5px 10px">12 Yrs</span>
+                                        </div>
+
+                                    </div>
+                                    <div class="photocard190" style="padding:2px 2px 2px 2px;display:table-cell;width:33%; vertical-align:middle; text-align:center">
+                                        <img src="~/Images/School/Medical/Doctor2.jpg" class="RoundedImage" />
+                                        <div>
+                                            <span style="font-size:12px; display:block">Sriram J</span>
+                                            <span style="font-size:8px;display:block">M.B.B.S</span>
+                                            <span style="font-size:8px;background-color:cornflowerblue;color:white;padding:5px 10px 5px 10px">15 Yrs</span>
+                                        </div>
+                                    </div>
+                                    <div class="photocard190" style="padding:2px 2px 2px 2px;display:table-cell;width:33%; vertical-align:middle; text-align:center">
+                                        <img src="~/Images/School/Medical/Doctor3.jpg" class="RoundedImage" />
+                                        <div>
+                                            <span style="font-size:12px; display:block">Sandhya</span>
+                                            <span style="font-size:8px;display:block">M.B.B.S</span>
+                                            <span style="font-size:8px;background-color:cornflowerblue;color:white;padding:5px 10px 5px 10px">6 Yrs</span>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        <div class="fadeIn" style="display:inline-block;width:25%;border:1px solid #e2e1e1;margin:0px 2px 0px 2px;background-color:white">
+                            <div class="div21header" style="background-color:#ff6a00;padding:4px 4px 4px 4px;color:white">
+                                <span class="font18">Eye Consultant</span>
+                            </div>
+                            <div class="div21footer">
+                                <div style="display:block;border-bottom:1px solid #e2e1e1 ">
+                                    <img src="~/Images/School/Medical/CompanyLogo1.jpg" style="height:80px;width:150px" />
+                                </div>
+                                <div style="display:block">
+                                    <span style="font-size:20px;color:black">Monthly Twice</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fadeIn" style="display:inline-block;width:25%;border:1px solid #e2e1e1;margin:0px 2px 0px 2px;background-color:white">
+                            <div class="div21header" style="background-color:#ff6a00;padding:4px 4px 4px 4px;color:white">
+                                <span class="font18">Psychology Consultant</span>
+                            </div>
+                            <div class="div21footer">
+                                <div style="display:block;border-bottom:1px solid #e2e1e1 ">
+                                    <img src="~/Images/School/Medical/CompanyLogo1.jpg" style="height:80px;width:150px" />
+                                </div>
+                                <div style="display:block">
+                                    <span style="font-size:20px;color:black">Three Months Once</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div id="Sports" class="tab-pane fade">
+                    
+                        <div class="ListOfData">
+                            <div class="card200" style="border:1px solid rgba(0,0,0,0.2);margin-right:10px;margin-left:10px;background-color:white">
+                                <table style="width:100%">
+                                    <tr>
+                                        <td style="text-align:center;">
+                                            <img src="~/Images/School/Sports/cricket.png" />
+
+                                        </td>
+
+                                    </tr>
+                                    <tr style="background-color:green;color:white;">
+                                        <td style="text-align:center;"><span>Cricket</span></td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                        <td><span>Trainer</span><span style="background-color:green;color:whitesmoke;float:right;padding:2px 12px 2px 12px;">Yes</span></td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                        <td><span>Ground</span><span style="background-color:green;color:whitesmoke;float:right;padding:2px 12px 2px 12px;">Yes</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Achievements</br>
+                                            <ul>
+                                                <li>District match winner 2008</li>
+                                                <li>State match winner 2007</li>
+                                                <li>Zonal match winner 20011</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="card200" style="border:1px solid rgba(0,0,0,0.2);margin-right:10px;margin-left:10px;background-color:white">
+                                <table style="width:100%">
+                                    <tr>
+                                        <td style="text-align:center;">
+                                            <img src="~/Images/School/Sports/cricket.png" />
+
+                                        </td>
+
+                                    </tr>
+                                    <tr style="background-color:green;color:white;">
+                                        <td style="text-align:center;"><span>Cricket</span></td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                        <td><span>Trainer</span><span style="background-color:green;color:whitesmoke;float:right;padding:2px 12px 2px 12px;">Yes</span></td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                        <td><span>Ground</span><span style="background-color:green;color:whitesmoke;float:right;padding:2px 12px 2px 12px;">Yes</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Achievements</br>
+                                            <ul>
+                                                <li>District match winner 2008</li>
+                                                <li>State match winner 2007</li>
+                                                <li>Zonal match winner 20011</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="card200" style="border:1px solid rgba(0,0,0,0.2);margin-right:10px;margin-left:10px;background-color:white">
+                                <table style="width:100%">
+                                    <tr>
+                                        <td style="text-align:center;">
+                                            <img src="~/Images/School/Sports/cricket.png" />
+
+                                        </td>
+
+                                    </tr>
+                                    <tr style="background-color:green;color:white;">
+                                        <td style="text-align:center;"><span>Football</span></td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                        <td><span>Trainer</span><span style="background-color:green;color:whitesmoke;float:right;padding:2px 12px 2px 12px;">Yes</span></td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                        <td><span>Ground</span><span style="background-color:green;color:whitesmoke;float:right;padding:2px 12px 2px 12px;">Yes</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Achievements</br>
+                                            <ul>
+                                                <li>District match winner 2008</li>
+                                                <li>State match winner 2007</li>
+                                                <li>Zonal match winner 20011</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                            <div class="card200" style="border:1px solid rgba(0,0,0,0.2);margin-right:10px;margin-left:10px;background-color:white">
+                                <table style="width:100%">
+                                    <tr>
+                                        <td style="text-align:center;">
+                                            <img src="~/Images/School/Sports/cricket.png" />
+
+                                        </td>
+
+                                    </tr>
+                                    <tr style="background-color:green;color:white;">
+                                        <td style="text-align:center;"><span>Basket Ball</span></td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                        <td><span>Trainer</span><span style="background-color:red;color:whitesmoke;float:right;padding:2px 12px 2px 12px;">No</span></td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                        <td><span>Ground</span><span style="background-color:green;color:whitesmoke;float:right;padding:2px 12px 2px 12px;">Yes</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Achievements</br>
+                                            <ul>
+                                                <li>District match winner 2008</li>
+                                                <li>State match winner 2007</li>
+                                                <li>Zonal match winner 20011</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="card200" style="border:1px solid rgba(0,0,0,0.2);margin-right:10px;margin-left:10px;background-color:white">
+                                <table style="width:100%">
+                                    <tr>
+                                        <td style="text-align:center;">
+                                            <img src="~/Images/School/Sports/cricket.png" />
+
+                                        </td>
+
+                                    </tr>
+                                    <tr style="background-color:green;color:white;">
+                                        <td style="text-align:center;"><span>Football</span></td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                        <td><span>Trainer</span><span style="background-color:green;color:whitesmoke;float:right;padding:2px 12px 2px 12px;">Yes</span></td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                        <td><span>Ground</span><span style="background-color:green;color:whitesmoke;float:right;padding:2px 12px 2px 12px;">Yes</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Achievements</br>
+                                            <ul>
+                                                <li>District match winner 2008</li>
+                                                <li>State match winner 2007</li>
+                                                <li>Zonal match winner 20011</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                            <div class="card200" style="border:1px solid rgba(0,0,0,0.2);margin-right:10px;margin-left:10px;background-color:white">
+                                <table style="width:100%">
+                                    <tr>
+                                        <td style="text-align:center;">
+                                            <img src="~/Images/School/Sports/cricket.png" />
+
+                                        </td>
+
+                                    </tr>
+                                    <tr style="background-color:green;color:white;">
+                                        <td style="text-align:center;"><span>Basket Ball</span></td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                        <td><span>Trainer</span><span style="background-color:red;color:whitesmoke;float:right;padding:2px 12px 2px 12px;">No</span></td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                        <td><span>Ground</span><span style="background-color:green;color:whitesmoke;float:right;padding:2px 12px 2px 12px;">Yes</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Achievements</br>
+                                            <ul>
+                                                <li>District match winner 2008</li>
+                                                <li>State match winner 2007</li>
+                                                <li>Zonal match winner 20011</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    <div style="display:inline-flex;width:1400px;margin-top:20px;text-align:center">
+                        <div style="display:inline-block;width:40%;border-color:white">
+                            <div class="card21" style="display:inline-block;width:95%;">
+                                <div style="background-color:#808080;color:white;padding:10px 10px 10px 10px;text-align:center">
+                                    <span>Physical Trainers</span>
+                                </div>
+                                <div style="display:inline-flex;width:100%;text-align:justify;margin-left:auto;margin-right:auto;background-color:white">
+                                    <div class="photocard190" style="padding:2px 2px 2px 2px;display:table-cell;width:33%; vertical-align:middle; text-align:center">
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" class="RoundedImage" />
+                                        <div>
+                                            <span style="font-size:10px;">Krishnan RA</span></br>
+                                            <span style="font-size:8px;">M.B.B.S</span>
+                                        </div>
+
+                                    </div>
+                                    <div class="photocard190" style="padding:2px 2px 2px 2px;display:table-cell;width:33%; vertical-align:middle; text-align:center">
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" class="RoundedImage" />
+                                        <div style="text-align:center">
+                                            <span style="font-size:10px;">Krishnan RA</span></br>
+                                            <span style="font-size:8px;">M.B.B.S</span>
+                                        </div>
+                                    </div>
+                                    <div class="photocard190" style="padding:2px 2px 2px 2px;display:table-cell;width:33%; vertical-align:middle; text-align:center">
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" class="RoundedImage" />
+                                        <div>
+                                            <span style="font-size:10px;">Krishnan RA</span></br>
+                                            <span style="font-size:8px;">M.B.B.S</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="fadeIn" style="display:inline-block;width:25%;border:1px solid #e2e1e1;margin:0px 2px 0px 2px;background-color:white">
+                            <div class="div21header" style="background-color:#c50505;padding:4px 4px 4px 4px;color:white">
+                                <span class="font18">Digital Content</span>
+                            </div>
+                            <div class="div21footer">
+                                <div style="display:block;border-bottom:1px solid #e2e1e1 ">
+                                    <img src="~/Images/School/Academics/Digital Content.jpg" style="height:50px;width:150px" />
+                                </div>
+                                
+                                <div style="display:block">
+                                    <span style="font-size:10px;color:black">Digital content is a dynamic classroom approach in which students actively explore abstract concepts of world as knowledge. Related Tags:Collaborative Learning,Integrated Studies,PBL Assessment,PBL Planning,Service Learning.</span>
+                                </div>
+                                <div style="display:block">
+                                    <span style="font-size:14px;color:cornflowerblue">www.educomp.com</span>
+                                </div>
+                               
+                            </div>
+
+                        </div>
+                    </div>
+                        <div style="display:inline-flex;width:1400px;margin-top:20px;">
+                            <div style="display:inline-block;width:100%;">
+
+                                <div class="card21" style="display:inline-block;width:100%;text-align:center;background-color:white">
+                                    <div style="padding:15px 10px 15px 10px;text-align:left;">
+                                        <span style="font-size:20px;">Photos</span>
+                                    </div>
+                                    <div class="scrollmenu">
+                                        <img src="~/Images/School/Sports/GroundImage2.jpg" style="height:20%;width:20%;padding:2px 2px 2px 2px;" />
+                                        <img src="~/Images/School/Sports/GroundImage2.jpg" style="height:20%;width:20%;padding:2px 2px 2px 2px;" />
+                                        <img src="~/Images/School/Sports/GroundImage2.jpg" style="height:20%;width:20%;padding:2px 2px 2px 2px;" />
+                                        <img src="~/Images/School/Sports/GroundImage2.jpg" style="height:20%;width:20%;padding:2px 2px 2px 2px;" />
+                                        <img src="~/Images/School/Sports/GroundImage2.jpg" style="height:20%;width:20%;padding:2px 2px 2px 2px;" />
+                                        <img src="~/Images/School/Sports/GroundImage2.jpg" style="height:20%;width:20%;padding:2px 2px 2px 2px;" />
+                                        <img src="~/Images/School/Sports/GroundImage2.jpg" style="height:20%;width:20%;padding:2px 2px 2px 2px;" />
+                                        <img src="~/Images/School/Sports/GroundImage2.jpg" style="height:20%;width:20%;padding:2px 2px 2px 2px;" />
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                <div id="Academics" class="tab-pane fade in active">
+                    <div style="display:inline-flex;width:1400px;margin-top:20px;">
+                        <div class="fadeIn" style="display:inline-block;width:25%;border:1px solid #e2e1e1;margin:0px 2px 0px 2px;background-color:white">
+                            <div class="div21header" style="background-color:#c50505;padding:4px 4px 4px 4px;color:white">
+                                <span class="font18">Digital Content</span>
+                            </div>
+                            <div class="div21footer">
+                                <div style="display:block;border-bottom:1px solid #e2e1e1 ">
+                                    <img src="~/Images/School/Academics/Digital Content.jpg" style="height:50px;width:150px" />
+                                </div>
+                                <div style="display:block">
+                                    <span style="font-size:10px;color:black">Digital content is a dynamic classroom approach in which students actively explore abstract concepts of world as knowledge. Related Tags:Collaborative Learning,Integrated Studies,PBL Assessment,PBL Planning,Service Learning.</span>
+                                </div>
+                                <div style="display:block">
+                                    <span style="font-size:14px;color:cornflowerblue">www.educomp.com</span>
+                                </div>
+                                <div style="display:block;">
+                                    <img src="~/Images/School/star.png" style="height:26px;width:26px;vertical-align:middle" />
+                                    <span style="vertical-align:middle;font-size:16px;color:red">3.2/5</span>
+                                </div>
+                            </div>
+                           
+                        </div>
+                        <div class="fadeIn" style="display:inline-block;width:25%;border:1px solid #e2e1e1;margin:0px 2px 0px 2px;background-color:white">
+                            <div class="div21header" style="background-color:#c50505;padding:4px 4px 4px 4px;color:white">
+                                <span class="font18">Curriculum</span>
+                            </div>
+                            <div class="div21footer">
+                                <div style="display:block;border-bottom:1px solid #e2e1e1 ">
+                                    <img src="~/Images/School/Academics/xseed-Curricullum.jpg" style="height:50px;width:150px" />
+                                </div>
+                                <div style="display:block">
+                                    <span style="font-size:10px;color:black">a proven and research based academic program for schools that builds thinking skills & problem solving confidence in children. XSEED children ask more questions, can write in their own words, like doing word problems in mathematics. Related Tags:Integrated Studies,PBL Assessment,PBL Planning,Service Learning.</span>
+                                </div>
+                                <div style="display:block">
+                                    <span style="font-size:14px;color:cornflowerblue">http://xseededucation.com/</span>
+                                </div>
+                                <div style="display:block;">
+                                    <img src="~/Images/School/star.png" style="height:26px;width:26px;vertical-align:middle" />
+                                    <span style="vertical-align:middle;font-size:16px;color:red">3.2/5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fadeIn" style="display:inline-block;width:25%;border:1px solid #e2e1e1;margin:0px 2px 0px 2px;background-color:white">
+                            <div class="div21header" style="background-color:#c50505;padding:4px 4px 4px 4px;color:white">
+                                <span class="font18">STEA/M Education</span>
+                            </div>
+                            <div class="div21footer">
+                                <div style="display:block;border-bottom:1px solid #e2e1e1 ">
+                                    <img src="~/Images/School/Academics/Creya_Learning.jpg" style="height:50px;width:100px" />
+                                </div>
+                                <div style="display:block">
+                                    <span style="font-size:10px;color:black">Project-based learning is a dynamic classroom approach in which students actively explore real-world problems and challenges and acquire a deeper knowledge. Related Tags:Collaborative Learning,Integrated Studies,PBL Assessment,PBL Planning,Service Learning.</span>
+                                </div>
+                                <div style="display:block">
+                                    <span style="font-size:14px;color:cornflowerblue">www.creyalearning.com</span>
+                                </div>
+                                <div style="display:block">
+                                    <img src="~/Images/School/star.png" style="height:26px;width:26px;vertical-align:middle" />
+                                    <span style="vertical-align:middle;font-size:16px;color:red">3.2/5</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="fadeIn" style="display:inline-block;width:25%;border:1px solid #e2e1e1;margin:0px 2px 0px 2px;background-color:white">
+                            <div class="div21header" style="background-color:#c50505;padding:4px 4px 4px 4px;color:white">
+                                <span class="font18">Project Based Learning</span>
+                            </div>
+                            <div class="div21footer">
+                                <div style="display:block;border-bottom:1px solid #e2e1e1 ">
+                                    <img src="~/Images/School/Academics/IE-Activitybased learning.jpg" style="height:50px;width:150px" />
+                                </div>
+                                <div style="display:block">
+                                    <span style="font-size:10px;color:black">Project-based learning is a dynamic classroom approach in which students actively explore real-world problems and challenges and acquire a deeper knowledge. Related Tags:Collaborative Learning,Integrated Studies,PBL Assessment,PBL Planning,Service Learning.</span>
+                                </div>
+                                <div style="display:block">
+                                    <span style="font-size:14px;color:cornflowerblue">www.crialsd.com</span>
+                                </div>
+                                <div style="display:block;">
+                                    <img src="~/Images/School/star.png" style="height:26px;width:26px;vertical-align:middle" />
+                                    <span style="vertical-align:middle;font-size:16px;color:red">3.2/5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fadeIn" style="display:inline-block;width:25%;border:1px solid #e2e1e1;margin:0px 2px 0px 2px;background-color:white">
+                            <div class="div21header" style="background-color:#c50505;padding:4px 4px 4px 4px;color:white">
+                                <span class="font18">Assessment</span>
+                            </div>
+                            <div class="div21footer">
+                                <div style="display:block;border-bottom:1px solid #e2e1e1 ">
+                                    <img src="~/Images/School/Academics/Assessments.jpg" style="height:50px;width:150px" />
+                                </div>
+                                <div style="display:block">
+                                    <span style="font-size:10px;color:black">Project-based learning is a dynamic classroom approach in which students actively explore real-world problems and challenges and acquire a deeper knowledge. Related Tags:Collaborative Learning,Integrated Studies,PBL Assessment,PBL Planning,Service Learning.</span>
+                                </div>
+                                <div style="display:block">
+                                    <span style="font-size:14px;color:cornflowerblue">www.crialsd.com</span>
+                                </div>
+                                <div style="display:block">
+                                    <img src="~/Images/School/star.png" style="height:26px;width:26px;vertical-align:middle" />
+                                    <span style="vertical-align:middle;font-size:16px;color:red">3.2/5</span>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div style="display:inline-flex;width:1400px;margin-top:20px;border:1px solid #e2e1e1">
+                        <div class="fadeIn" style="display:inline-block;width:40%;border:1px solid #e2e1e1;margin:0px 2px 0px 2px;background-color:white">
+                            <div class="div21header" style="background-color:#c50505;padding:4px 4px 4px 4px;color:white" >
+                                <span class="font18">Publishers Used</span>
+                            </div>
+                            <div class="div21footer">
+                                <img src="~/Images/School/Academics/Publisher-1.jpg" style="height:100px;width:150px;" />
+                                <img src="~/Images/School/Academics/Publisher.jpg" style="height:100px;width:150px;" />
+                                <img src="~/Images/School/Academics/Quris-Curricullum.jpg" style="height:100px;width:150px;" />
+                            </div>
+                        </div>
+                        <div class="fadeIn" style="display:inline-block;width:40%;border:1px solid #e2e1e1;margin:0px 2px 0px 2px;background-color:white">
+                            <div class="div21header" style="background-color:#c50505;padding:4px 4px 4px 4px;color:white">
+                                <span class="font18">Labs</span>
+                            </div>
+                            <div class="div21footer">
+                            
+                                <img src="~/Images/School/Academics/heymath logo_0.jpg" style="height:100px;width:150px;" />
+                                <img src="~/Images/School/Academics/brain_gold.jpg" style="height:100px;width:150px;" />
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div id="Achievements" class="tab-pane fade">
+                    <div class="ListOfData">
+                        <div class="card350" style="border:1px solid rgba(0,0,0,0.2);margin-right:10px;margin-left:10px;margin-bottom:20px;">
+                            <table style="width:100%">
+
+                                <tr style="background-color:#2597ff;color:white;">
+                                    <td style="text-align:center;"><span>National Level SInging Competetion</span></td>
+                                </tr>
+                               
+                                <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                    <td>
+                                        <span>Ms. Karthika of 4th standard has won national level singing competetion conducted by popular tv show</span>
+                                    </td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                    <td>
+                                        <span>Jan 2016</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                        <div class="card350" style="border:1px solid rgba(0,0,0,0.2);margin-right:20px;margin-left:10px;">
+                            <table style="width:100%">
+
+                                <tr style="background-color:#2597ff;color:white;">
+                                    <td style="text-align:center;"><span>National Level SInging Competetion</span></td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                    <td>
+                                        <span>Ms. Karthika of 4th standard has won national level singing competetion conducted by popular tv show</span>
+                                    </td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                    <td>
+                                        <span>Jan 2016</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                        <div class="card350" style="border:1px solid rgba(0,0,0,0.2);margin-right:20px;margin-left:10px;">
+                            <table style="width:100%">
+
+                                <tr style="background-color:#2597ff;color:white;">
+                                    <td style="text-align:center;"><span>National Level SInging Competetion</span></td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                    <td>
+                                        <span>Ms. Karthika of 4th standard has won national level singing competetion conducted by popular tv show</span>
+                                    </td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                    <td>
+                                        <span>Jan 2016</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                 </div>
+                </div>
+                <div id="Extracurricular" class="tab-pane fade">
+                    <div class="ListOfData">
+                        <div class="card350" style="border:1px solid rgba(0,0,0,0.2);margin-right:10px;margin-left:10px;margin-bottom:10px;">
+                            <table style="width:100%">
+
+                                <tr style="background-color:green;color:white;">
+                                    <td style="text-align:center;"><span>Yoga Class by Baba Ramdev</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Ms. Karthika of 4th standard has won national level singing competetion conducted by popular tv show</span>
+                                    </td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                    <td>
+                                        <span style="color:darkgrey">Date:Jan 2016</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;border:1px solid rgba(0,0,0,0.2);padding:2px 2px 2px 2px" />
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;border:1px solid rgba(0,0,0,0.2);padding:2px 2px 2px 2px" />
+
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;border:1px solid rgba(0,0,0,0.2);padding:2px 2px 2px 2px" />
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;border:1px solid rgba(0,0,0,0.2);padding:2px 2px 2px 2px" />
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                        <div class="card350" style="border:1px solid rgba(0,0,0,0.2);margin-right:20px;margin-left:10px;">
+                            <table style="width:100%">
+
+                                <tr style="background-color:green;color:white;">
+                                    <td style="text-align:center;"><span>Singing training by Adarsh</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Ms. Karthika of 4th standard has won national level singing competetion conducted by popular tv show</span>
+                                    </td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                    <td>
+                                        <span style="color:darkgrey">Date:Jan 2016</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                        <div class="card350" style="border:1px solid rgba(0,0,0,0.2);margin-right:20px;margin-left:10px;">
+                            <table style="width:100%">
+
+                                <tr style="background-color:#03813c;color:white;">
+                                    <td style="text-align:center;"><span>Dance Training by Blue Box Team</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Ms. Karthika of 4th standard has won national level singing competetion conducted by popular tv show</span>
+                                    </td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                    <td>
+                                        <span style="color:darkgrey">Date:Jan 2016</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                        <div class="card350" style="border:1px solid rgba(0,0,0,0.2);margin-right:10px;margin-left:10px;margin-bottom:10px;">
+                            <table style="width:100%">
+
+                                <tr style="background-color:#f79928;color:white;">
+                                    <td style="text-align:center;"><span>Creia Training</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Ms. Karthika of 4th standard has won national level singing competetion conducted by popular tv show</span>
+                                    </td>
+                                </tr>
+                                <tr style="border-bottom:1px solid darkgrey">
+                                    <td>
+                                        <span style="color:darkgrey">Date:Jan 2016</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                        <div class="card350" style="border:1px solid rgba(0,0,0,0.2);margin-right:20px;margin-left:10px;">
+                            <table style="width:100%">
+
+                                <tr style="background-color:#03813c;color:white;">
+                                    <td style="text-align:center;"><span>National Level SInging Competetion</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Ms. Karthika of 4th standard has won national level singing competetion conducted by popular tv show</span>
+                                    </td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                    <td>
+                                        <span style="color:darkgrey">Date:Jan 2016</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                        <div class="card350" style="border:1px solid rgba(0,0,0,0.2);margin-right:20px;margin-left:10px;">
+                            <table style="width:100%">
+
+                                <tr style="background-color:#f79928;color:white;">
+                                    <td style="text-align:center;"><span>National Level SInging Competetion</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Ms. Karthika of 4th standard has won national level singing competetion conducted by popular tv show</span>
+                                    </td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                    <td>
+                                        <span style="color:darkgrey">Date:Jan 2016</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                        <div class="card350" style="border:1px solid rgba(0,0,0,0.2);margin-right:20px;margin-left:10px;">
+                            <table style="width:100%">
+
+                                <tr style="background-color:#03813c;color:white;">
+                                    <td style="text-align:center;"><span>National Level SInging Competetion</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Ms. Karthika of 4th standard has won national level singing competetion conducted by popular tv show</span>
+                                    </td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                    <td>
+                                        <span style="color:darkgrey">Date:Jan 2016</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                        <div class="card350" style="border:1px solid rgba(0,0,0,0.2);margin-right:20px;margin-left:10px;">
+                            <table style="width:100%">
+
+                                <tr style="background-color:#03813c;color:white;">
+                                    <td style="text-align:center;"><span>National Level SInging Competetion</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Ms. Karthika of 4th standard has won national level singing competetion conducted by popular tv show</span>
+                                    </td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                    <td>
+                                        <span style="color:darkgrey">Date:Jan 2016</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                        <div class="card350" style="border:1px solid rgba(0,0,0,0.2);margin-right:20px;margin-left:10px;">
+                            <table style="width:100%">
+
+                                <tr style="background-color:#03813c;color:white;">
+                                    <td style="text-align:center;"><span>National Level SInging Competetion</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span>Ms. Karthika of 4th standard has won national level singing competetion conducted by popular tv show</span>
+                                    </td>
+                                </tr>
+                                <tr style="border-bottom:1px solid rgba(0,0,0,0.2)">
+                                    <td>
+                                        <span style="color:darkgrey">Date:Jan 2016</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+                                        <img src="~/Images/School/Medical/Doctor1.jpg" style="height:60px;width:60px;" />
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+                    </div>
+                    <div ng-bind-html="DataBindRelatedData" style="display:inline;width:1200px;">
+                        @*Sports*@
+
+
+
+                    </div>
+                </div>
+    </div>
+</body>
+</html>

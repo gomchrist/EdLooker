@@ -1,4 +1,4 @@
-﻿
+﻿@inherits System.Web.Mvc.WebViewPage
 @{
     Layout = null;
 }
@@ -9,10 +9,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="~/Styles/animation.css" />
     <title>EDLooker</title>
     <style>
         #bannerimg {
@@ -60,7 +64,7 @@
         .button1 {
             background-color: #ffd800; /* Green */
             border: none;
-            color: black;
+            color: white;
             margin-left:-20px;
             margin-top:20px;
             padding: 15px 32px;
@@ -78,6 +82,10 @@
         #searchbutton {
             position: relative;
             top: 70%;
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
         }
         #Searchdiv input[type=text] {
             margin-top: 30px;
@@ -185,7 +193,7 @@ input.radio:focus ~ label:before {
         .card {
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
             transition: 0.3s;
-            width: 30%;
+            
             display: -webkit-inline-box;
             margin: 0 2px 4px 6px;
         }
@@ -194,13 +202,9 @@ input.radio:focus ~ label:before {
                 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
             }
 
-        .container {
-            padding: 2px 16px;
-        }
-        
         .ListOfData {
-        text-align:center;
         margin-top:50px;
+        margin:auto
         }
        
     </style>
@@ -210,15 +214,28 @@ input.radio:focus ~ label:before {
         width:20%;
          opacity: 1.0;
         }
+        #tabselection {
+        text-align:center;
+        }
     </style>
+    <script>
+        function callPage(Page)
+        {
+            window.location.href = '/Edloo/'+Page;
+        }
+    </script>
 </head>
 <body>
     <img id="bannerimg" src="~/Images/Homepage.jpg" />
     <img src="~/Images/Logo.png" id="logo" />
     <div id="Searchdiv">
         <h1 id="bannertext">DISCOVER YOUR FUTURE HERE</h1>
-        <input type="text" id="LocationSearch" placeholder="Location">
-        <input type="text" id="Search" placeholder="Lookup">
+        
+        <div>
+            <input type="text" id="LocationSearch" placeholder="Coimbatore,Chennai..">
+            <input type="text" id="Search" placeholder="School,College,Yoga..">
+        </div>
+        
         <div class="alignbuttoncenter">
             <button id="searchbutton" class="button1 button10">Search</button>
         </div>
@@ -256,8 +273,133 @@ input.radio:focus ~ label:before {
         </div>
     </div>*@
     <div class="ListOfData">
-        <div class="card">
-            <img src="~/Images/Homepage.jpg" alt="Avatar" style="width:100%">
+        <div class="card slideExpandUp" onclick="callPage('School')" style="width:50%">
+
+            <div style="display:flex">
+                <div style="display:inline-block;border-right:1px solid #D1D3D4;padding:5px 2px 5px 2px;width:30%">
+                    <img src="~/Images/School1.png" alt="Avatar" style="max-width: 100%;max-height: 80%;width: auto;height: auto;">
+                </div>
+
+                <div style="display:inline-block;width:70%;padding-left:5px;font-family:cursive">
+                    <div style="display:flex;padding-top:10px;">
+                        <div style="display:inline-flex">
+                            <span style="font-size:2rem;font-family:Verdana"><b>RAYANSH</b></span>
+                            <div style="padding-left:2em">
+                                <span style="color:white;padding:0px 2px 0px 2px;border-radius:3px;float:right;background-color:red;vertical-align:middle;font-size:large">3.5</span>
+                            </div>
+                        </div>
+                        <div style="display:inline-flex;vertical-align:middle;margin:auto">
+                            
+                        </div>
+                        
+                        
+                    </div>
+                    <div style="display:flex;padding-top:5px;">
+                        <span style="color:#009ed4">CBSE School</span>
+                    </div>
+                    <div class="containerdetails" style="display:flex;padding-top:5px;">
+                        <div style="display:inline-block;width:50%">
+                            <div style="display:block">
+                                <div>
+                                    <span style="font-size:10px;">Grade</span>
+                                </div>
+                                <div>
+                                    <span style="font-size:12px;color:black">G1-G12</span>
+                                </div>
+                            </div>
+                            <div style="display:block;padding-top:5px;">
+                                <div class="NumberofStudents" style="display:block">
+                                    <div>
+                                        <span style="font-size:10px;">Location</span>
+                                    </div>
+                                    <div>
+                                        <span style="font-size:12px;color:black">Saravanampatty,Coimbatore</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="display:block;padding-top:5px;">
+                                <div class="NumberofStudents" style="display:block">
+                                    <div>
+                                        <span style="font-size:10px;">Admissions</span>
+                                    </div>
+                                    <div>
+                                        <span style="font-size:12px;color:#4DCB6D;font-size:14px;">Open</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display:inline-block;width:50%">
+                            <div class="container" style="display:inline-block">
+                                <table>
+                                    <tr style="height:20px;">
+                                        <td style="width:50%">Academics</td>
+                                        <td><span style="color:white;padding:0px 2px 0px 2px;border-radius:3px;float:right;background-color:goldenrod;vertical-align:middle;font-size:x-small">3.5</span></td>
+                                    </tr>
+                                    <tr style="height:20px;">
+                                        <td style="width:50%">Teaching</td>
+                                        <td><span style="color:white;padding:0px 2px 0px 2px;border-radius:3px;float:right;background-color:green;vertical-align:middle;font-size:x-small">4.5</span></td>
+                                    </tr>
+                                    <tr style="height:20px;">
+                                        <td style="width:50%">Sports</td>
+                                        <td><span style="color:white;padding:0px 2px 0px 2px;border-radius:3px;float:right;background-color:red;vertical-align:middle;font-size:x-small">2.6</span></td>
+                                    </tr>
+                                    <tr style="height:20px;">
+                                        <td style="width:50%">Extra-Curricular</td>
+                                        <td><span style="color:white;padding:0px 2px 0px 2px;border-radius:3px;float:right;background-color:red;vertical-align:middle;font-size:x-small">2.9</span></td>
+                                    </tr>
+                                </table>
+                               
+                            </div>
+                        </div>
+                        
+                        </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card slideExpandUp" onclick="callPage('SpecialClasses')" style="width:40%">
+            
+            <div class="container">
+                <h4><b>Bharath Yoga Class</b></h4>
+                <p style="color:#009ed4">Yoga Class</p>
+                <div class="containerdetails" style="display:flex">
+                    <div class="NumberofStudents" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">#Hours</span>
+                        </div>
+                        <div>
+                            <span style="font-size:12px;">72-3 Days</span>
+                        </div>
+                    </div>
+                    <div class="Timing" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Location</span>
+                        </div>
+                        <div>
+                            <span style="font-size:12px;">Coimbatore</span>
+                        </div>
+                    </div>
+                    <div class="Pricing" style="width:25%;">
+                        <div>
+                            <span style="font-size:10px;">Start Date</span>
+                        </div>
+                        <div>
+                            <span style="font-size:12px;">22/3/17</span>
+                        </div>
+                    </div>
+                    <div class="Review" style="width:25%;">
+                        <div>
+                            <span style="font-size:12px;">Review</span>
+                        </div>
+                        <div>
+                            <span style="color:orangered;font-size:15px;">3.5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card slideExpandUp" onclick="callPage('College')" style="width:40%">
+            
             <div class="container">
                 <h4><b>SKCET</b></h4>
                 <p>Engineering College</p>
@@ -267,23 +409,23 @@ input.radio:focus ~ label:before {
                             <span style="font-size:10px;">#Students</span>
                         </div>
                         <div>
-                            <span style="font-size:15px;">210</span>
+                            <span style="font-size:15px;">1140</span>
                         </div>
                     </div>
                     <div class="Timing" style="width:25%;">
                         <div>
-                            <span style="font-size:10px;">Timing</span>
+                            <span style="font-size:10px;">Courses</span>
                         </div>
                         <div>
-                            <span style="font-size:15px;">7pm-8pm</span>
+                            <span style="font-size:15px;">32</span>
                         </div>
                     </div>
                     <div class="Pricing" style="width:25%;">
                         <div>
-                            <span style="font-size:10px;">Pricing</span>
+                            <span style="font-size:10px;">Univ</span>
                         </div>
                         <div>
-                            <span style="font-size:15px;">8k-12k</span>
+                            <span style="font-size:15px;">Anna</span>
                         </div>
                     </div>
                     <div class="Review" style="width:25%;">
@@ -297,419 +439,378 @@ input.radio:focus ~ label:before {
                 </div>
             </div>
         </div>
-        <div class="card">
-            <img src="~/Images/Homepage.jpg" alt="Avatar" style="width:100%">
-            <div class="container">
-                <h4><b>SKIT</b></h4>
-                <p>Engineering College</p>
-                <div class="containerdetails" style="display:flex">
-                    <div class="NumberofStudents" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">#Students</span>
-                        </div>
-                        <div>
-                            <span style="font-size:15px;">210</span>
-                        </div>
+        @*<div class="card slideExpandUp">
+        <img src="~/Images/Homepage.jpg" alt="Avatar" style="width:100%">
+        <div class="container">
+            <h4><b>Virtual Technolgies</b></h4>
+            <p>VLSI Design</p>
+            <div class="containerdetails" style="display:flex">
+                <div class="NumberofStudents" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">#Students</span>
                     </div>
-                    <div class="Timing" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">Timing</span>
-                        </div>
-                        <div>
-                            <span style="font-size:15px;">7pm-8pm</span>
-                        </div>
+                    <div>
+                        <span style="font-size:15px;">210</span>
                     </div>
-                    <div class="Pricing" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">Pricing</span>
-                        </div>
-                        <div>
-                            <span style="font-size:15px;">8k-12k</span>
-                        </div>
+                </div>
+                <div class="Timing" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">Timing</span>
                     </div>
-                    <div class="Review" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">Review</span>
-                        </div>
-                        <div>
-                            <span style="color:orangered;font-size:15px;">3.5</span>
-                        </div>
+                    <div>
+                        <span style="font-size:15px;">7pm-8pm</span>
+                    </div>
+                </div>
+                <div class="Pricing" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">Fees</span>
+                    </div>
+                    <div>
+                        <span style="font-size:15px;">8k-12k</span>
+                    </div>
+                </div>
+                <div class="Review" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">Review</span>
+                    </div>
+                    <div>
+                        <span style="color:orangered;font-size:15px;">3.5</span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="card">
-            <img src="~/Images/Homepage.jpg" alt="Avatar" style="width:100%">
-            <div class="container">
-                <h4><b>Virtual Technolgies</b></h4>
-                <p>VLSI Design</p>
-                <div class="containerdetails" style="display:flex">
-                    <div class="NumberofStudents" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">#Students</span>
-                        </div>
-                        <div>
-                            <span style="font-size:15px;">210</span>
-                        </div>
+    </div>
+    <div class="card slideExpandUp">
+        <img src="~/Images/Homepage.jpg" alt="Avatar" style="width:100%">
+        <div class="container">
+            <h4><b>Sun Bright</b></h4>
+            <p>CAD Design</p>
+            <div class="containerdetails" style="display:flex">
+                <div class="NumberofStudents" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">#Students</span>
                     </div>
-                    <div class="Timing" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">Timing</span>
-                        </div>
-                        <div>
-                            <span style="font-size:15px;">7pm-8pm</span>
-                        </div>
+                    <div>
+                        <span style="font-size:15px;">210</span>
                     </div>
-                    <div class="Pricing" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">Pricing</span>
-                        </div>
-                        <div>
-                            <span style="font-size:15px;">8k-12k</span>
-                        </div>
+                </div>
+                <div class="Timing" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">Timing</span>
                     </div>
-                    <div class="Review" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">Review</span>
-                        </div>
-                        <div>
-                            <span style="color:orangered;font-size:15px;">3.5</span>
-                        </div>
+                    <div>
+                        <span style="font-size:15px;">7pm-8pm</span>
+                    </div>
+                </div>
+                <div class="Pricing" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">Fees</span>
+                    </div>
+                    <div>
+                        <span style="font-size:15px;">8k-12k</span>
+                    </div>
+                </div>
+                <div class="Review" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">Review</span>
+                    </div>
+                    <div>
+                        <span style="color:orangered;font-size:15px;">3.5</span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="card">
-            <img src="~/Images/Homepage.jpg" alt="Avatar" style="width:100%">
-            <div class="container">
-                <h4><b>Sun Bright</b></h4>
-                <p>CAD Design</p>
-                <div class="containerdetails" style="display:flex">
-                    <div class="NumberofStudents" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">#Students</span>
-                        </div>
-                        <div>
-                            <span style="font-size:15px;">210</span>
-                        </div>
+    </div>
+    <div class="card slideExpandUp">
+        <img src="~/Images/Homepage.jpg" alt="Avatar" style="width:100%">
+        <div class="container">
+            <h4><b>NIIT</b></h4>
+            <p>C++,C#</p>
+            <div class="containerdetails" style="display:flex">
+                <div class="NumberofStudents" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">#Students</span>
                     </div>
-                    <div class="Timing" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">Timing</span>
-                        </div>
-                        <div>
-                            <span style="font-size:15px;">7pm-8pm</span>
-                        </div>
+                    <div>
+                        <span style="font-size:15px;">210</span>
                     </div>
-                    <div class="Pricing" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">Pricing</span>
-                        </div>
-                        <div>
-                            <span style="font-size:15px;">8k-12k</span>
-                        </div>
+                </div>
+                <div class="Timing" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">Timing</span>
                     </div>
-                    <div class="Review" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">Review</span>
-                        </div>
-                        <div>
-                            <span style="color:orangered;font-size:15px;">3.5</span>
-                        </div>
+                    <div>
+                        <span style="font-size:15px;">7pm-8pm</span>
+                    </div>
+                </div>
+                <div class="Pricing" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">Fees</span>
+                    </div>
+                    <div>
+                        <span style="font-size:15px;">8k-12k</span>
+                    </div>
+                </div>
+                <div class="Review" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">Review</span>
+                    </div>
+                    <div>
+                        <span style="color:orangered;font-size:15px;">3.5</span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="card">
-            <img src="~/Images/Homepage.jpg" alt="Avatar" style="width:100%">
-            <div class="container">
-                <h4><b>NIIT</b></h4>
-                <p>C++,C#</p>
-                <div class="containerdetails" style="display:flex">
-                    <div class="NumberofStudents" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">#Students</span>
-                        </div>
-                        <div>
-                            <span style="font-size:15px;">210</span>
-                        </div>
+    </div>
+    <div class="card slideExpandUp">
+        <img src="~/Images/Homepage.jpg" alt="Avatar" style="width:100%">
+        <div class="container">
+            <h4><b>Teach Bright</b></h4>
+            <p>C#,Java</p>
+            <div class="containerdetails" style="display:flex">
+                <div class="NumberofStudents" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">#Students</span>
                     </div>
-                    <div class="Timing" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">Timing</span>
-                        </div>
-                        <div>
-                            <span style="font-size:15px;">7pm-8pm</span>
-                        </div>
+                    <div>
+                        <span style="font-size:15px;">210</span>
                     </div>
-                    <div class="Pricing" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">Pricing</span>
-                        </div>
-                        <div>
-                            <span style="font-size:15px;">8k-12k</span>
-                        </div>
+                </div>
+                <div class="Timing" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">Timing</span>
                     </div>
-                    <div class="Review" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">Review</span>
-                        </div>
-                        <div>
-                            <span style="color:orangered;font-size:15px;">3.5</span>
-                        </div>
+                    <div>
+                        <span style="font-size:15px;">7pm-8pm</span>
+                    </div>
+                </div>
+                <div class="Pricing" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">Fees</span>
+                    </div>
+                    <div>
+                        <span style="font-size:15px;">8k-12k</span>
+                    </div>
+                </div>
+                <div class="Review" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">Review</span>
+                    </div>
+                    <div>
+                        <span style="color:orangered;font-size:15px;">3.5</span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="card">
-            <img src="~/Images/Homepage.jpg" alt="Avatar" style="width:100%">
-            <div class="container">
-                <h4><b>Teach Bright</b></h4>
-                <p>C#,Java</p>
-                <div class="containerdetails" style="display:flex">
-                    <div class="NumberofStudents" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">#Students</span>
-                        </div>
-                        <div>
-                            <span style="font-size:15px;">210</span>
-                        </div>
+    </div>
+    <div class="card slideExpandUp">
+        <img src="~/Images/Homepage.jpg" alt="Avatar" style="width:100%">
+        <div class="container">
+            <h4><b>Enlight Teaching</b></h4>
+            <p>CAD Modelling</p>
+            <div class="containerdetails" style="display:flex">
+                <div class="NumberofStudents" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">#Students</span>
                     </div>
-                    <div class="Timing" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">Timing</span>
-                        </div>
-                        <div>
-                            <span style="font-size:15px;">7pm-8pm</span>
-                        </div>
+                    <div>
+                        <span style="font-size:15px;">210</span>
                     </div>
-                    <div class="Pricing" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">Pricing</span>
-                        </div>
-                        <div>
-                            <span style="font-size:15px;">8k-12k</span>
-                        </div>
+                </div>
+                <div class="Timing" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">Timing</span>
                     </div>
-                    <div class="Review" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">Review</span>
-                        </div>
-                        <div>
-                            <span style="color:orangered;font-size:15px;">3.5</span>
-                        </div>
+                    <div>
+                        <span style="font-size:15px;">7pm-8pm</span>
+                    </div>
+                </div>
+                <div class="Pricing" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">Fees</span>
+                    </div>
+                    <div>
+                        <span style="font-size:15px;">8k-12k</span>
+                    </div>
+                </div>
+                <div class="Review" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">Review</span>
+                    </div>
+                    <div>
+                        <span style="color:orangered;font-size:15px;">3.5</span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="card">
-            <img src="~/Images/Homepage.jpg" alt="Avatar" style="width:100%">
-            <div class="container">
-                <h4><b>Enlight Teaching</b></h4>
-                <p>CAD Modelling</p>
-                <div class="containerdetails" style="display:flex">
-                    <div class="NumberofStudents" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">#Students</span>
-                        </div>
-                        <div>
-                            <span style="font-size:15px;">210</span>
-                        </div>
+    </div>
+    <div class="card slideExpandUp">
+        <img src="~/Images/Homepage.jpg" alt="Avatar" style="width:100%">
+        <div class="container">
+            <h4><b>NIIT</b></h4>
+            <p>SQL</p>
+            <div class="containerdetails" style="display:flex">
+                <div class="NumberofStudents" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">#Students</span>
                     </div>
-                    <div class="Timing" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">Timing</span>
-                        </div>
-                        <div>
-                            <span style="font-size:15px;">7pm-8pm</span>
-                        </div>
+                    <div>
+                        <span style="font-size:15px;">210</span>
                     </div>
-                    <div class="Pricing" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">Pricing</span>
-                        </div>
-                        <div>
-                            <span style="font-size:15px;">8k-12k</span>
-                        </div>
+                </div>
+                <div class="Timing" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">Timing</span>
                     </div>
-                    <div class="Review" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">Review</span>
-                        </div>
-                        <div>
-                            <span style="color:orangered;font-size:15px;">3.5</span>
-                        </div>
+                    <div>
+                        <span style="font-size:15px;">7pm-8pm</span>
+                    </div>
+                </div>
+                <div class="Pricing" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">Fees</span>
+                    </div>
+                    <div>
+                        <span style="font-size:15px;">8k-12k</span>
+                    </div>
+                </div>
+                <div class="Review" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">Review</span>
+                    </div>
+                    <div>
+                        <span style="color:orangered;font-size:15px;">3.5</span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="card">
-            <img src="~/Images/Homepage.jpg" alt="Avatar" style="width:100%">
-            <div class="container">
-                <h4><b>NIIT</b></h4>
-                <p>SQL</p>
-                <div class="containerdetails" style="display:flex">
-                    <div class="NumberofStudents" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">#Students</span>
-                        </div>
-                        <div>
-                            <span style="font-size:15px;">210</span>
-                        </div>
+    </div>
+    <div class="card slideExpandUp">
+        <img src="~/Images/Homepage.jpg" alt="Avatar" style="width:100%">
+        <div class="container">
+            <h4><b>Mahavandir</b></h4>
+            <p>Matriculation</p>
+            <div class="containerdetails" style="display:flex">
+                <div class="NumberofStudents" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">#Students</span>
                     </div>
-                    <div class="Timing" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">Timing</span>
-                        </div>
-                        <div>
-                            <span style="font-size:15px;">7pm-8pm</span>
-                        </div>
+                    <div>
+                        <span style="font-size:15px;">210</span>
                     </div>
-                    <div class="Pricing" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">Pricing</span>
-                        </div>
-                        <div>
-                            <span style="font-size:15px;">8k-12k</span>
-                        </div>
+                </div>
+                <div class="Timing" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">Timing</span>
                     </div>
-                    <div class="Review" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">Review</span>
-                        </div>
-                        <div>
-                            <span style="color:orangered;font-size:15px;">3.5</span>
-                        </div>
+                    <div>
+                        <span style="font-size:15px;">7pm-8pm</span>
+                    </div>
+                </div>
+                <div class="Pricing" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">Fees</span>
+                    </div>
+                    <div>
+                        <span style="font-size:15px;">8k-12k</span>
+                    </div>
+                </div>
+                <div class="Review" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">Review</span>
+                    </div>
+                    <div>
+                        <span style="color:orangered;font-size:15px;">3.5</span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="card">
-            <img src="~/Images/Homepage.jpg" alt="Avatar" style="width:100%">
-            <div class="container">
-                <h4><b>Mahavandir</b></h4>
-                <p>Matriculation</p>
-                <div class="containerdetails" style="display:flex">
-                    <div class="NumberofStudents" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">#Students</span>
-                        </div>
-                        <div>
-                            <span style="font-size:15px;">210</span>
-                        </div>
+    </div>
+    <div class="card slideExpandUp">
+        <img src="~/Images/Homepage.jpg" alt="Avatar" style="width:100%">
+        <div class="container">
+            <h4><b>Tina School</b></h4>
+            <div >
+                <span >MBA,MCSA</span>
+                <span style="float:right;color:green;font-size:14px;float:right">Special Class</span>
+            </div>
+            <div class="containerdetails" style="display:flex">
+                <div class="NumberofStudents" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">#Students</span>
                     </div>
-                    <div class="Timing" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">Timing</span>
-                        </div>
-                        <div>
-                            <span style="font-size:15px;">7pm-8pm</span>
-                        </div>
+                    <div>
+                        <span style="font-size:15px;">210</span>
                     </div>
-                    <div class="Pricing" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">Pricing</span>
-                        </div>
-                        <div>
-                            <span style="font-size:15px;">8k-12k</span>
-                        </div>
+                </div>
+                <div class="Timing" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">Timing</span>
                     </div>
-                    <div class="Review" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">Review</span>
-                        </div>
-                        <div>
-                            <span style="color:orangered;font-size:15px;">3.5</span>
-                        </div>
+                    <div>
+                        <span style="font-size:15px;">7pm-8pm</span>
+                    </div>
+                </div>
+                <div class="Pricing" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">Fees</span>
+                    </div>
+                    <div>
+                        <span style="font-size:15px;">8k-12k</span>
+                    </div>
+                </div>
+                <div class="Review" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">Review</span>
+                    </div>
+                    <div>
+                        <span style="color:orangered;font-size:15px;">3.5</span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="card">
-            <img src="~/Images/Homepage.jpg" alt="Avatar" style="width:100%">
-            <div class="container">
-                <h4><b>Tina School</b></h4>
-                <div >
-                    <span >MBA,MCSA</span>
-                    <span style="float:right;color:green;font-size:14px;float:right">Special Class</span>
+    </div>
+    <div class="card slideExpandUp">
+        <img src="~/Images/Homepage.jpg" alt="Avatar" style="width:100%">
+        <div class="container">
+            <h4><b>Gali</b></h4>
+            <p>VR School<span>Special Class</span></p>
+            <div class="containerdetails" style="display:flex">
+                <div class="NumberofStudents" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">#Students</span>
+                    </div>
+                    <div>
+                        <span style="font-size:15px;">210</span>
+                    </div>
                 </div>
-                <div class="containerdetails" style="display:flex">
-                    <div class="NumberofStudents" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">#Students</span>
-                        </div>
-                        <div>
-                            <span style="font-size:15px;">210</span>
-                        </div>
+                <div class="Timing" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">Timing</span>
                     </div>
-                    <div class="Timing" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">Timing</span>
-                        </div>
-                        <div>
-                            <span style="font-size:15px;">7pm-8pm</span>
-                        </div>
+                    <div>
+                        <span style="font-size:15px;">7pm-8pm</span>
                     </div>
-                    <div class="Pricing" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">Pricing</span>
-                        </div>
-                        <div>
-                            <span style="font-size:15px;">8k-12k</span>
-                        </div>
+                </div>
+                <div class="Pricing" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">Fees</span>
                     </div>
-                    <div class="Review" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">Review</span>
-                        </div>
-                        <div>
-                            <span style="color:orangered;font-size:15px;">3.5</span>
-                        </div>
+                    <div>
+                        <span style="font-size:15px;">8k-12k</span>
+                    </div>
+                </div>
+                <div class="Review" style="width:25%;">
+                    <div>
+                        <span style="font-size:10px;">Review</span>
+                    </div>
+                    <div>
+                        <span style="color:orangered;font-size:15px;">3.5</span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="card">
-            <img src="~/Images/Homepage.jpg" alt="Avatar" style="width:100%">
-            <div class="container">
-                <h4><b>Gali</b></h4>
-                <p>VR School<span>Special Class</span></p>
-                <div class="containerdetails" style="display:flex">
-                    <div class="NumberofStudents" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">#Students</span>
-                        </div>
-                        <div>
-                            <span style="font-size:15px;">210</span>
-                        </div>
-                    </div>
-                    <div class="Timing" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">Timing</span>
-                        </div>
-                        <div>
-                            <span style="font-size:15px;">7pm-8pm</span>
-                        </div>
-                    </div>
-                    <div class="Pricing" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">Pricing</span>
-                        </div>
-                        <div>
-                            <span style="font-size:15px;">8k-12k</span>
-                        </div>
-                    </div>
-                    <div class="Review" style="width:25%;">
-                        <div>
-                            <span style="font-size:10px;">Review</span>
-                        </div>
-                        <div>
-                            <span style="color:orangered;font-size:15px;">3.5</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </div>*@
     </div>
     
     @*<div class="card-group">

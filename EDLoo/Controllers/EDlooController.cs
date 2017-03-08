@@ -33,5 +33,10 @@ namespace EDLoo.Controllers
         {
             return View();
         }
+        public ActionResult TutorProfile()
+        {
+            return View();
+        }
+        
     }
 }

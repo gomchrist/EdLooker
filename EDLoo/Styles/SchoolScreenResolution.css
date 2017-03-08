@@ -1,0 +1,99 @@
+﻿@media (min-width:350px) and (max-width: 400px) {
+    #SchoolNameSpan {
+        font-size: 9px;
+    }
+
+    #SchoolRatingSpan {
+        font-size: 12px;
+    }
+    #SchoolRatingimg {
+        height:8px;
+        width:8px;
+    }
+    #SchoolLocationLocationSpan {
+        font-size:8px;
+    }
+    #SchoolLocationLocationImg {
+        display:none;
+    }
+    #SchoolBoardImg {
+          display:none;
+    }
+    #SchoolBoardSpan {
+         font-size:8px;
+    }
+}
+
+@media (min-width:400px) and (max-width: 500px) {
+    #SchoolNameSpan {
+        font-size: 12px;
+    }
+    #SchoolRatingSpan {
+        font-size: 9px;
+    }
+    #SchoolRatingimg {
+        height: 10px;
+        width: 10px;
+    }
+    #SchoolLocationLocationSpan {
+        font-size:8px;
+    }
+    #SchoolLocationLocationImg {
+       display:none;
+    }
+    #SchoolBoardImg {
+         display:none;
+    }
+    #SchoolBoardSpan {
+         font-size:8px;
+    }
+}
+@media (min-width:500px) and (max-width: 650px) {
+    #SchoolNameSpan {
+        font-size: 12px;
+    }
+    #SchoolRatingSpan {
+        font-size: 9px;
+    }
+    #SchoolRatingimg {
+        height:10px;
+        width:10px;
+    }
+    #SchoolLocationLocationSpan {
+        font-size:10px;
+    }
+    #SchoolLocationLocationImg {
+        display:none;
+    }
+    #SchoolBoardImg {
+          display:none;
+    }
+    #SchoolBoardSpan {
+         font-size:8px;
+    }
+}
+@media (min-width:650px) and (max-width: 1700px) {
+    #SchoolNameSpan {
+        font-size: 24px;
+    }
+    #SchoolRatingSpan {
+        font-size: 16px;
+    }
+    #SchoolRatingimg {
+        height:26px;
+        width:26px;
+    }
+    #SchoolLocationLocationSpan {
+        font-size:16px;
+    }
+    #SchoolLocationLocationImg {
+        height:32px;width:32px;
+    }
+    #SchoolBoardImg {
+        height:32px;width:32px;
+    }
+    #SchoolBoardSpan {
+        font-size:16px;
+    }
+}
+     
